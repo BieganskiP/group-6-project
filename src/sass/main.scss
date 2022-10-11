@@ -5,3 +5,19 @@
 
 // Style dla pliku z przykładem HTML fragmentu
 
+@use '../partials/resets';
+
+@use '../components/base';
+
+@use '../components/header';
+@use '../components/hero';
+@use '../components/advantages';
+@use '../components/problems';
+@use '../components/howWeDo';
+@use '../components/program';
+@use '../components/benefits';
+@use '../components/about';
+@use '../components/guarantee';
+@use '../components/reviews';
+@use '../components/contacts';
+@use '../components/footer';
