@@ -1,1 +1,15 @@
 @use '../partials' as *;
+
+body {
+  min-width: 320px;
+}
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    min-width: 1200px;
+  }
+}
