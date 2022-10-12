@@ -3,3 +3,18 @@
   max-width: 100%;
   margin-block: auto;
 }
+// Ogólnie używany flexbox, w $direction wpisujemy row lub column.
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+// Używane do headerów sekcji, w $size trzeba wpisać wartość w pixelach
+// mobilne = 20px
+// tablety = 26px
+// desktopy = 46px
+@mixin sectionHeader($size) {
+  font-size: $size;
+  font-weight: 800;
+}
