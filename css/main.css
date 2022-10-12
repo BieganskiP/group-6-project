@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,6 +20,21 @@ a {
   color: inherit;
 }
 
+body {
+  min-width: 320px;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    min-width: 1200px;
+  }
+}
 /*
  * Główny plik dla stylów.
  * Wszystkie partials podłączamy tutaj.

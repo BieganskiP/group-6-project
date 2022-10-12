@@ -1,7 +1,10 @@
 @use '../partials' as *;
 
+//Edytować poniżej
+
 body {
   min-width: 320px;
+  font-family: 'Montserrat', sans-serif;
 }
 @media (min-width: 768px) {
   body {
