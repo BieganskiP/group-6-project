@@ -35,6 +35,44 @@ body {
     min-width: 1200px;
   }
 }
+.howWeDo {
+  min-width: 320px;
+  max-width: 100%;
+  margin-block: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.howWeDo__heading {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  color: #111518;
+  margin-bottom: 30px;
+}
+
+.grid__box {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.grid__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.08 em;
+  margin-bottom: 32px;
+}
+
+.grid__text {
+  color: #b9b9b9;
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.08 em;
+}
+
 /*
  * Główny plik dla stylów.
  * Wszystkie components oraz utils podłączamy tutaj.
