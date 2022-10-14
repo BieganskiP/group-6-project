@@ -1,3 +1,87 @@
 @use '../utils' as *;
 
 //Edytować poniżej
+.container-rev {
+  &__heading {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text;
+    margin-top: 50px;
+  }
+}
+
+.slide-rev {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 564px;
+  background: #ffffff;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  &__img {
+    width: 90px;
+    height: 90px;
+  }
+  &__svg {
+    padding: 20px;
+  }
+  &__text {
+    padding-left: 20px;
+    padding-right: 20px;
+    &--name {
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.08em;
+      color: $theme;
+      padding-bottom: 10px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    &--description {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      letter-spacing: 0.08em;
+      color: $secondary-text;
+      padding-bottom: 25px;
+    }
+    &--feedback {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      color: $feedback-text;
+    }
+    &--more {
+      color: $theme;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.graduates {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  &__img {
+    width: 54px;
+    height: 54px;
+  }
+  &__svg {
+
+  }
+}
