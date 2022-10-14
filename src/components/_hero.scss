@@ -1,3 +1,87 @@
-@use "../utils" as *;
+@use '../utils' as *;
 
 //Edytować poniżej
+/***************** MOBILE *****************/
+.hero {
+  @include flexCenter(column);
+  margin: 0 20px;
+  &__box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url('C:\Users\Kuba\Desktop\GoIT\HTML\Projekt\group-6-project\src\images\background-mobile.png');
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: #3d3d3d;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000000;
+    padding-top: 50px;
+    line-height: 22px;
+    &--gray {
+      color: $secondary-text;
+      font-weight: 500;
+    }
+    &--orange {
+      color: $theme;
+    }
+  }
+  &__btn {
+    margin: 30px 0;
+    width: 260px;
+    height: 48px;
+    background-color: $theme;
+    border-style: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__img {
+    position: relative;
+    width: 177.75px;
+    height: 177.5px;
+    &--transparent {
+      position: absolute;
+      top: 9px;
+      left: -20px;
+      width: 208px;
+      height: 148.85px;
+    }
+  }
+}
+
+/***************** TABLET *****************/
+@media screen and (min-width: 768px) {
+}
+/***************** DESKTOP *****************/
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: url('C:\Users\Kuba\Desktop\GoIT\HTML\Projekt\group-6-project\src\images\background.png');
+    &__img {
+      position: relative;
+      width: 719.17px;
+      height: 718.14px;
+      &--transparent {
+        position: absolute;
+        top: 38px;
+        left: -81px;
+        width: 841.55px;
+        height: 602.24px;
+      }
+    }
+  }
+}

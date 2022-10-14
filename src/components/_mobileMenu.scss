@@ -1,3 +1,76 @@
-@use "../utils" as *;
+@use '../utils' as *;
 
 //Edytować poniżej
+.menu-open {
+  margin-left: 179px;
+  padding: 0 auto;
+  width: 20.5px;
+  height: 12px;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(17, 21, 24, 0.9);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30.5px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+  }
+  &__logo {
+    margin: 30px 20px 0;
+  }
+  &__close {
+    width: 14.5px;
+    height: 14.5px;
+  }
+  &__mobile {
+    padding: 0;
+    margin: 108.53px 40px 50px 20px;
+  }
+  &__link {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 36px;
+    color: #ffffff;
+    &:hover,
+    :focus {
+      color: $theme;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  &__btn {
+    width: 260px;
+    height: 48px;
+    margin-left: 30px;
+    border: solid 2px $theme;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: $theme;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+.menu.is-open {
+  transform: translateX(0);
+}
+
+.menu .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: getColor('black');
+}
