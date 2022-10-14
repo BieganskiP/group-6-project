@@ -16,22 +16,29 @@
 
 }
 
-.grid__box {
-    padding: 0 20px;
-    text-align: center;
-}
+.grid {
+    @include flexCenter(column);
+    gap: 15px;
 
-.grid__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.43;
-    letter-spacing: .08 em;
-    margin-bottom: 32px;
-}
+    &__item {
+        padding: 0 20px;
+        text-align: center;
+    }
 
-.grid__text{
-color: $secondary-text;
-font-size: 12px;
-line-height: 1.66;
-letter-spacing: .08 em;
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.43;
+        letter-spacing: .08 em;
+        margin-bottom: 32px;
+    
+    }
+
+    &__text {
+        color: $secondary-text;
+        font-size: 12px;
+        line-height: 1.66;
+        letter-spacing: .08 em;
+    }
+
 }

@@ -53,11 +53,17 @@ body {
   margin-bottom: 30px;
 }
 
-.grid__box {
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.grid__item {
   padding: 0 20px;
   text-align: center;
 }
-
 .grid__title {
   font-weight: 700;
   font-size: 14px;
@@ -65,7 +71,6 @@ body {
   letter-spacing: 0.08 em;
   margin-bottom: 32px;
 }
-
 .grid__text {
   color: #b9b9b9;
   font-size: 12px;
