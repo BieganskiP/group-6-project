@@ -142,7 +142,7 @@
 .teacher__photo{
     margin-right: 40px;
     min-width: 243px;
-    max-height: 305.58px;
+    height: 305.58px;
 }
 
 .teacher__title {
@@ -174,8 +174,14 @@
     font-weight: 500px;
     font-size: 12px;
     line-height: 1.666;
-    
+   
 }
 
-
   }
+
+  // DESKTOP
+
+@media screen and (min-width: 768px) {
+
+
+}
