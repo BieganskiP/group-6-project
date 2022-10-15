@@ -1,3 +1,62 @@
 @use '../utils' as *;
 
 //Edytować poniżej
+
+.program {
+  margin: 0 auto;
+  max-width: 480px;
+  background-color: #111518;
+  color: #ffffff;
+
+  &__header {
+    max-width: 280px;
+    margin: 50px auto 43px;
+    text-align: center;
+  }
+
+  &__semestr-list {
+    margin-left: 94px;
+    padding-left: 26px;
+    list-style-position: inside;
+    border-left: 1px solid #ffffff;
+  }
+
+  &__semestr-list-item {
+    position: relative;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 2em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__semestr-list-item::before {
+    content: '';
+    background-image: url();
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__topic-list-item {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.66em;
+    letter-spacing: 0.08em;
+    text-transform: none;
+
+    color: #ff6b09;
+  }
+
+  &__detail-list-item {
+    // margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.66em;
+    letter-spacing: 0.08em;
+    color: #b9b9b9;
+    opacity: 0.5;
+  }
+}

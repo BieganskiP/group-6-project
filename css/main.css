@@ -35,6 +35,57 @@ body {
     min-width: 1200px;
   }
 }
+.program {
+  margin: 0 auto;
+  max-width: 480px;
+  background-color: #111518;
+  color: #ffffff;
+}
+.program__header {
+  max-width: 280px;
+  margin: 50px auto 43px;
+  text-align: center;
+}
+.program__semestr-list {
+  margin-left: 94px;
+  padding-left: 26px;
+  list-style-position: inside;
+  border-left: 1px solid #ffffff;
+}
+.program__semestr-list-item {
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.program__semestr-list-item::before {
+  content: "";
+  background-image: url();
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.program__topic-list-item {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.66em;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: #ff6b09;
+}
+.program__detail-list-item {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.66em;
+  letter-spacing: 0.08em;
+  color: #b9b9b9;
+  opacity: 0.5;
+}
+
 /*
  * Główny plik dla stylów.
  * Wszystkie components oraz utils podłączamy tutaj.
