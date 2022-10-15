@@ -1,3 +1,48 @@
-@use "../utils" as *;
+@use '../utils' as *;
 
 //Edytować poniżej
+
+@media (min-width: 320px) {
+  .footer {
+    padding-top: 50px;
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 50px;
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      background: #111518;
+      height: 70px;
+      padding-left: 52px;
+    }
+    &__copyrights {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 28px;
+      color: #b9b9b9;
+    }
+
+    &__tel {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.08em;
+      color: #111518;
+
+      &:hover,
+      &:focus {
+        color: $theme;
+        outline: none;
+      }
+    }
+  }
+}
