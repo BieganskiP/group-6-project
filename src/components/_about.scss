@@ -4,8 +4,7 @@
 
 @mixin flexStart($direction) {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: $direction;
 
 }
@@ -32,11 +31,31 @@
     margin-bottom: 19.34px;
 }
 
-&__item{
+&__list{
    @include flexStart(column);
     height: 188.64px;
     justify-content: space-between;
+    padding-left: 26.11px;
+ font-weight: 500;
+    font-size: 13.54;
+    line-height: 1.172;
+    letter-spacing: .06em;
+    margin-bottom: 42.13px;
 
+}
+
+&__description{
+    font-weight: 500px;
+    font-size: 12px;
+    line-height: 1.666;
+    color: $secondary-text;
+    margin-bottom: 10px;
+}
+
+&__link{
+    @extend .teacher__description;
+    color: $theme;
+    text-decoration: underline;
 }
 
     }

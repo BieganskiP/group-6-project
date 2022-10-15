@@ -179,13 +179,29 @@ body {
   padding-bottom: 9.67px;
   margin-bottom: 19.34px;
 }
-.teacher__item {
+.teacher__list {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   height: 188.64px;
   justify-content: space-between;
+  padding-left: 26.11px;
+  font-weight: 500;
+  font-size: 13.54;
+  line-height: 1.172;
+  letter-spacing: 0.06em;
+  margin-bottom: 42.13px;
+}
+.teacher__description, .teacher__link {
+  font-weight: 500px;
+  font-size: 12px;
+  line-height: 1.666;
+  color: #b9b9b9;
+  margin-bottom: 10px;
+}
+.teacher__link {
+  color: #ff6b09;
+  text-decoration: underline;
 }
 
 .menu-open {
