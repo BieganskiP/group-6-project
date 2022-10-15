@@ -47,7 +47,7 @@ body {
 .howWeDo__heading {
   font-size: 20px;
   font-weight: 800;
-  line-height: 26px;
+  line-height: 1.3px;
   letter-spacing: 0.03em;
   color: #111518;
   margin-bottom: 30px;
@@ -67,14 +67,14 @@ body {
 .grid__title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.43;
+  line-height: 1.428;
   letter-spacing: 0.08 em;
   margin-bottom: 32px;
 }
 .grid__text {
   color: #b9b9b9;
   font-size: 12px;
-  line-height: 1.66;
+  line-height: 1.666;
   letter-spacing: 0.08 em;
 }
 
