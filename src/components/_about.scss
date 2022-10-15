@@ -1,16 +1,25 @@
 @use '../utils' as *;
 
 //Edytować poniżej
+
+@mixin flexStart($direction) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: $direction;
+
+}
+
 .teacher {
     @include container;
-    @include flexCenter(column);
+    padding: 50px 20px;
 
     &__heading {
     @include sectionHeader(20px);
     line-height: 1.3;
     letter-spacing: .03em;
     color: $primary-text;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     }
 
 &__title{
@@ -18,6 +27,16 @@
     font-size: 19.34px;
     line-height: 1.172;
     letter-spacing: .08em;
+    border-bottom: .978px solid $secondary-text;
+    padding-bottom: 9.67px;
+    margin-bottom: 19.34px;
+}
+
+&__item{
+   @include flexStart(column);
+    height: 188.64px;
+    justify-content: space-between;
+
 }
 
     }
