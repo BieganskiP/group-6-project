@@ -1,3 +1,91 @@
 @use "../utils" as *;
 
 //Edytować poniżej
+
+.guarantee{
+    flex-direction: row;
+    margin:0 auto;
+    &__container{
+        background-color: $contrast-text;
+    }
+    &__header {
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color:$primary-text;
+        padding: 30px;
+    }
+
+    &__list{
+        background-color: #F1F1F1;
+        padding: 30px 20px 7px 28px;
+    }
+    &__item{
+        justify-content: flex-start;
+        flex-direction: column;
+        border-left: 1px dashed #B9B9B9;
+        padding-left: 27px;
+        padding-bottom: 23px;
+        &:last-child{
+            border-left: none;
+            }
+        }
+    
+    &__icon{
+        position: absolute;
+        width: 15px;
+        height: 20px;
+        fill:$theme;
+        margin-left: -35px;
+    }
+    &__paragraph{
+        font-size: 12px;
+        line-height: 20px;  
+        &__indicated{
+        color:$theme;
+        }
+}
+}
+@media screen and (min-width:768px){
+.guarantee{
+    &__list{
+        background-color: #F1F1F1;
+        margin: 0 40px;
+        padding: 50px 112px 7px 123px;
+    }
+    &__item{
+        padding-left: 41px;
+        padding-bottom: 20px;
+    }
+    &__icon{    
+        margin-left: -48px;}
+
+    &__paragraph{
+        line-height: 28px;
+    }
+}
+}
+
+@media screen and (min-width:1680px){
+    .guarantee{
+        &__header {
+            font-size: 46px;
+            padding: 50px;
+        }
+        &__list{
+            background-color: #F1F1F1;
+            margin: 0 183px;
+            padding: 40px 123px;
+        }
+        &__icon{
+            width: 22px;
+            height: 30px;
+            margin-left: -50px;
+        }
+        &__paragraph{
+            font-size: 20px;
+        }
+    }
+    }
