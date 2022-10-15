@@ -1,3 +1,23 @@
 @use '../utils' as *;
 
 //Edytować poniżej
+.teacher {
+    @include container;
+    @include flexCenter(column);
+
+    &__heading {
+    @include sectionHeader(20px);
+    line-height: 1.3;
+    letter-spacing: .03em;
+    color: $primary-text;
+    margin-bottom: 30px;
+    }
+
+&__title{
+    font-weight: 800;
+    font-size: 19.34px;
+    line-height: 1.172;
+    letter-spacing: .08em;
+}
+
+    }
