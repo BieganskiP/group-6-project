@@ -1,0 +1,91 @@
+@use '../utils' as *;
+
+.problems {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px 0 20px;
+  font-size: 20px;
+  font-weight: 800;
+  gap: 30px;
+  height: 545px;
+  background-color: $primary-text;
+  color: $contrast-text;
+  &__header {
+    @include sectionHeader(24px);
+    letter-spacing: 0.03em;
+    margin: left;
+
+    &--orange {
+      color: $theme;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 10px;
+    background-color: $contrast-text;
+    color: $primary-text;
+    height: 465px;
+    padding: 20px 30px;
+    overflow: visible;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.1);
+    &__text {
+      color: $theme;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/*======= Tablet ======= */
+@media (min-width: 768px) {
+  .problems {
+    height: 340px;
+    width: 100%;
+    &__list {
+      display: grid;
+      grid-template-columns: 236px 236px;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+    }
+  }
+}
+/*======== Deskopt =======*/
+
+@media (min-width: 1280px) {
+  .problems {
+    height: 440px;
+    width: 100%;
+    &__header {
+      @include sectionHeader(46px);
+      letter-spacing: 0.03em;
+      margin-left: 110px;
+    }
+    &__list {
+      height: 465px;
+      width: 85%;
+      display: grid;
+      padding: 80px 82px 52px 114px;
+      grid-template-columns: 236px 236px 250px;
+      justify-content: center;
+      align-items: center;
+      gap: 32px 110px;
+      &__text {
+        &--active {
+          transition: .5s;
+          &:hover,
+          &:focus {
+            cursor: pointer;
+            transform: scale(1.2);
+            transition: .3s;
+          }
+        }
+      }
+    }
+  }
+}
