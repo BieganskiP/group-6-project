@@ -1,3 +1,155 @@
-@use "../utils" as *;
+@use '../utils' as *;
 
 //Edytować poniżej
+
+@media (min-width: 320px) {
+  .contacts {
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/form-transparent@1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 85% 50%;
+    height: 507px;
+    padding: 0px 19px 0px 19px;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: white;
+      margin-top: 50px;
+      height: 73px;
+
+      &--orange {
+        color: $theme;
+      }
+    }
+
+    &__description {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      text-align: center;
+      margin-top: 17px;
+      margin-bottom: 30px;
+
+      &--orange {
+        color: $theme;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      height: 48px;
+      background: none;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      padding-left: 28px;
+
+      &:first-of-type {
+        margin-bottom: 20px;
+      }
+
+      &:focus {
+        border-color: $theme;
+        outline: none;
+      }
+    }
+
+    &__btn {
+      margin: 50px 0;
+      width: 260px;
+      height: 48px;
+      background-color: $theme;
+      border-style: none;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    height: 520px;
+    padding: 0px 100px 0px 100px;
+
+    &__title {
+      height: 100px;
+      font-size: 26px;
+    }
+
+    &__description {
+      width: 452px;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 56px;
+    }
+
+    &__input {
+      width: 390px;
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .contacts {
+    height: 840px;
+    padding: 0px 100px 0px 100px;
+
+    &__title {
+      width: 1133px;
+      height: 178px;
+      font-size: 46px;
+      margin-top: 100px;
+    }
+
+    &__description {
+      width: 1133px;
+      height: 74px;
+      font-size: 30px;
+      line-height: 36.57px;
+    }
+
+    &__input {
+      width: 497px;
+      height: 70px;
+      font-size: 20px;
+      line-height: 24px;
+
+      &:first-of-type {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__btn {
+      width: 368px;
+      height: 70px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
