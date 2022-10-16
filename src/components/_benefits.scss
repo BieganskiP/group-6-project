@@ -52,3 +52,57 @@
     color: #111518;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .benefits {
+    max-width: 768px;
+    margin: 0 auto;
+    // background: #111518;
+    // background: linear-gradient(180deg, #111518 0%, #111518 70%, #ffffff 70%, #ffffff 100%);
+    // position: relative;
+    // top: -150px;
+
+    &__header {
+      width: auto;
+      font-size: 26px;
+      line-height: 1.3em;
+      letter-spacing: 0.03em;
+      text-align: center;
+      margin: 0 20px 30px;
+    }
+
+    &__ordered-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: calc((100% - 20px) / 2);
+      gap: 40px;
+      justify-content: center;
+    }
+
+    &__ordered-list-item {
+      width: 236px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .benefits {
+    max-width: 1314px;
+    background: transparent;
+    top: -400px;
+
+    &__header {
+      display: none;
+    }
+
+    &__ordered-list {
+      flex-basis: calc((100% - 2 * 20px) / 3);
+      gap: 20px;
+    }
+
+    &__ordered-list-item {
+      width: 356px;
+      padding-right: 20px;
+    }
+  }
+}

@@ -41,6 +41,7 @@ body {
   background-color: #111518;
   color: #ffffff;
   overflow: hidden;
+  position: relative;
 }
 .program__header {
   max-width: 280px;
@@ -51,7 +52,6 @@ body {
 .program__semestr-list {
   margin-left: 94px;
   list-style-position: inside;
-  position: relative;
 }
 .program__semestr-list-item {
   position: relative;
@@ -99,13 +99,96 @@ body {
   opacity: 0.5;
 }
 .program__picture {
-  max-width: 59%;
+  width: 176px;
+  height: auto;
   position: relative;
-  bottom: 90px;
-  left: 200px;
+  top: -80px;
+  left: 220px;
   z-index: 2;
 }
 
+@media screen and (min-width: 768px) {
+  .program {
+    max-width: 768px;
+  }
+  .program__header {
+    padding-top: 51px;
+    margin: 0 0 52px 40px;
+    text-align: left;
+  }
+  .program__semestr-list-item {
+    padding: 0 0 30px 50px;
+  }
+  .program__detail-list {
+    margin-top: 5px;
+  }
+  .program__topic-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .program__topic-list-item {
+    width: 176px;
+  }
+  .program__topic-list-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .program__picture {
+    width: 384px;
+    height: auto;
+    top: -150px;
+    left: 360px;
+    z-index: 2;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .program {
+    max-width: 1680px;
+    height: 1237px;
+  }
+  .program__header {
+    max-width: 688px;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 1.3em;
+    letter-spacing: 0.03em;
+    margin: 0 0 100px 184px;
+  }
+  .program__semestr-list-container {
+    border-top: 1px solid #ffffff;
+  }
+  .program__semestr-list {
+    display: flex;
+    justify-content: center;
+  }
+  .program__semestr-list-item {
+    border-left: 0px;
+    padding-top: 60px;
+    padding-left: 0;
+  }
+  .program__semestr-list-item::before {
+    content: "";
+    position: absolute;
+    background-color: #ff6b09;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    top: -6px;
+    left: 0;
+  }
+  .program__topic-list {
+    flex-direction: column;
+  }
+  .program__topic-list-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  .program__picture {
+    width: 759px;
+    height: 502px;
+    bottom: 0;
+    left: -76px;
+    z-index: 0;
+  }
+}
 .benefits {
   max-width: 480px;
   margin: 0 auto;
@@ -151,6 +234,48 @@ body {
   color: #111518;
 }
 
+@media screen and (min-width: 768px) {
+  .benefits {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .benefits__header {
+    width: auto;
+    font-size: 26px;
+    line-height: 1.3em;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0 20px 30px;
+  }
+  .benefits__ordered-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 20px) / 2);
+    gap: 40px;
+    justify-content: center;
+  }
+  .benefits__ordered-list-item {
+    width: 236px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .benefits {
+    max-width: 1314px;
+    background: transparent;
+    top: -400px;
+  }
+  .benefits__header {
+    display: none;
+  }
+  .benefits__ordered-list {
+    flex-basis: calc((100% - 40px) / 3);
+    gap: 20px;
+  }
+  .benefits__ordered-list-item {
+    width: 356px;
+    padding-right: 20px;
+  }
+}
 /*
  * Główny plik dla stylów.
  * Wszystkie components oraz utils podłączamy tutaj.
