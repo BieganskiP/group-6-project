@@ -15,6 +15,7 @@
     @include container;
     @include flexCenter(column);
     padding: 205px 20px 50px 20px;
+    max-width: 1314px;
 
 
     &__heading {
@@ -39,23 +40,18 @@
         padding: 30px 10px 10px;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-         &:hover,
-         &:focus{
+        &:hover,
+        &:focus {
             cursor: pointer;
-       background-color: $theme;
-    }
+            background-color: $theme;
+        }
     }
 
-    &__icon{
+    &__icon {
         fill: $theme;
         margin-bottom: 20px;
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
- &:hover,
- &:focus{
-        fill: $contrast-text;
-       
-    }
     }
 
     &__title {
@@ -65,12 +61,7 @@
         letter-spacing: .08 em;
         margin-bottom: 32px;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
-      &:hover,
-      &:focus{
-       color: $contrast-text;
-       
-    }
+  
     }
 
     &__text {
@@ -82,55 +73,65 @@
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         &::before{
-        @include pseudoelement(16.52px,13.54px);
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23FF6B09'/%3E%3C/svg%3E");
-        position: absolute;
-        left: 50%;
-        top: -16px;
-        transform: translateX(-50%);
-        transition: backround-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        &:hover{
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23fff'/%3E%3C/svg%3E");
+            @include pseudoelement(16.52px, 13.54px);
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23FF6B09'/%3E%3C/svg%3E");
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    transform: translateX(-50%);
+    transition: backround-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-      }
 
- &:hover,
- &:focus{
-       color: $contrast-text;
-       
-    }
     }
 
-   
-
-    // &__text--highlighted::before{
-    //     @include pseudoelement(16.52px,13.54px);
-    //     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23fff'/%3E%3C/svg%3E");
-    //     position: absolute;
-    //     left: 50%;
-    //     top: -16px;
-    //     transform: translateX(-50%);
-    // }
 }
+
+.grid__item:hover .grid__icon,
+.grid__item:focus .grid__icon{
+    fill: $contrast-text;
+}
+.grid__item:hover .grid__title,
+.grid__item:focus .grid__title,
+.grid__item:focus .grid__text,
+.grid__item:hover .grid__text{
+    color: $contrast-text;
+
+}
+
+.grid__item:focus .grid__text::before,
+.grid__item:hover .grid__text::before{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23fff'/%3E%3C/svg%3E");
+
+}
+
+
 
 
 
 // TABLET
 
 @media screen and (min-width: 768px) {
-    .howWeDo__heading {
-        @include sectionHeader(26px);
+
+    .howWeDo {
+        margin: 0 auto;
+
+        &__heading {
+            @include sectionHeader(26px);
+        }
     }
 
-    .grid{
+    .grid {
         flex-direction: row;
         flex-wrap: wrap;
         row-gap: 27px;
 
-        &__item{
-         flex-basis: calc((100% - 20px)/2);
-    }
+        &__item {
+            flex-basis: calc((100% - 20px)/2);
+        }
+
+        &__title{
+            height: 53px;
+        }
     }
 
 }
@@ -141,14 +142,15 @@
     .howWeDo__heading {
         @include sectionHeader(46px);
         margin-bottom: 50px;
+        text-align: start;
     }
 
-    .grid{
+    .grid {
         row-gap: 20px;
 
-        &__item{
-         flex-basis: calc((100% - 40px)/3);
-    }
+        &__item {
+            flex-basis: calc((100% - 40px)/3);
+        }
     }
 
 }

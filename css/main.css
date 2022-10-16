@@ -442,6 +442,7 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 205px 20px 50px 20px;
+  max-width: 1314px;
 }
 .howWeDo__heading {
   font-size: 20px;
@@ -476,9 +477,6 @@ body {
   margin-bottom: 20px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.grid__icon:hover, .grid__icon:focus {
-  fill: #fff;
-}
 .grid__title {
   font-weight: 700;
   font-size: 14px;
@@ -486,9 +484,6 @@ body {
   letter-spacing: 0.08 em;
   margin-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.grid__title:hover, .grid__title:focus {
-  color: #fff;
 }
 .grid__text {
   color: #b9b9b9;
@@ -513,14 +508,28 @@ body {
   transform: translateX(-50%);
   transition: backround-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.grid__text::before:hover {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23fff'/%3E%3C/svg%3E");
+
+.grid__item:hover .grid__icon,
+.grid__item:focus .grid__icon {
+  fill: #fff;
 }
-.grid__text:hover, .grid__text:focus {
+
+.grid__item:hover .grid__title,
+.grid__item:focus .grid__title,
+.grid__item:focus .grid__text,
+.grid__item:hover .grid__text {
   color: #fff;
 }
 
+.grid__item:focus .grid__text::before,
+.grid__item:hover .grid__text::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
 @media screen and (min-width: 768px) {
+  .howWeDo {
+    margin: 0 auto;
+  }
   .howWeDo__heading {
     font-size: 26px;
     font-weight: 800;
@@ -533,12 +542,16 @@ body {
   .grid__item {
     flex-basis: calc((100% - 20px) / 2);
   }
+  .grid__title {
+    height: 53px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .howWeDo__heading {
     font-size: 46px;
     font-weight: 800;
     margin-bottom: 50px;
+    text-align: start;
   }
   .grid {
     row-gap: 20px;
