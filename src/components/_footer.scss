@@ -60,12 +60,10 @@
       line-height: 17px;
       letter-spacing: 0.08em;
       color: #111518;
-
       &--icon {
         width: 20px;
         height: 20px;
       }
-
       &:hover,
       &:focus {
         color: $theme;
@@ -83,6 +81,7 @@
       align-items: center;
       background: #111518;
       height: 70px;
+      padding: 0;
     }
 
     &__copyrights {
@@ -98,6 +97,7 @@
 @media (min-width: 768px) {
   .footer {
     padding: 0;
+
     &__top {
       flex-direction: row;
       justify-content: space-between;
@@ -136,6 +136,7 @@
         height: 23px;
       }
     }
+
     &__copyrights {
       margin-left: 40px;
     }
