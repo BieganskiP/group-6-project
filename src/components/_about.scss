@@ -51,6 +51,7 @@
 
     &__box {
         display: flex;
+    
 
     }
 
@@ -58,42 +59,30 @@
     &__icons {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        flex-basis: calc((100%-60px)/3);
-        margin-bottom: 42.13px;
-        max-width: 16.52px;
 
     }
 
     &__icon {
+        width: 16.52px;
         height: 100%;
     }
 
 
     &__competences {
-        @include flexStart(column);
-        height: 188.64px;
-        justify-content: space-between;
+        display: block;
         font-weight: 500;
         font-size: 13.54px;
         line-height: 1.172;
         letter-spacing: .06em;
         margin-left: 8.62px;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
         position: relative;
 
-    }
-
-    &__competences::after {
-        @include pseudoelement(16.52px,13.54px);
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23FF6B09'/%3E%3C/svg%3E");
-        position: absolute;
-        top: 210px;
-        left: -24px;
     }
 
     &__item {
         position: relative;
+        margin-bottom: 17px;
     }
 
     &__item::before {
@@ -103,19 +92,27 @@
         left: -24px;
     }
 
-
-
     &__description {
         font-weight: 500px;
         font-size: 12px;
         line-height: 1.666;
         color: $secondary-text;
         margin-bottom: 10px;
+        position: relative;
     }
 
+    &__description::before {
+        @include pseudoelement(16.52px,13.54px);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23FF6B09'/%3E%3C/svg%3E");
+        position: absolute;
+        top: -20px;
+    }
 
+ 
     &__link {
-        @extend .teacher__description;
+        font-weight: 500px;
+        font-size: 12px;
+        line-height: 1.666;
         color: $theme;
         text-decoration: underline;
     }
@@ -153,22 +150,28 @@
 }
 
 .teacher__competences{
-    height: 165px;
     font-size: 12px;
     margin-left: 8.92px;
-    margin-bottom: 72px;
+    margin-bottom: 50px;
 
 }
 
-.teacher__competences::after{
-    top: 210px;
+.teacher__item {
+    margin-bottom: 30px;
 }
+
 
 .teacher__description {
     font-weight: 400px;
     font-size: 10px;
     line-height: 2.8;
 }
+
+
+.teacher__description::before{
+    top:-25px;
+}
+
 
 .teacher__link {
     font-weight: 500px;
@@ -181,7 +184,60 @@
 
   // DESKTOP
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+    .teacher {
+        padding: 130px 0;
+        max-width: 1200px;
+     margin: 0 auto;
+    }
+
+    .teacher__heading {
+        @include sectionHeader(46px);
+        margin-bottom: 50px;
+    }
+
+    
+    .teacher__title {
+        @include sectionHeader(30px);
+        padding-bottom: 15px;
+        margin-bottom: 45px;
+    }
+
+    .teacher__photo{
+        margin-right: 30px;
+        min-width: 530px;
+        height: 667px;
+    }
+
+    .teacher__competences{
+        font-weight: 500;
+        font-size: 16px;
+        margin-left: 8.92px;
+        margin-bottom: 60px;
+    
+    }
+
+    .teacher__description {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400px;
+        font-size: 18px;
+        line-height: 1.555;
+
+    }
+
+    .teacher__description::before{
+        top:-30px;
+    }
+
+    .teacher__paragraph{
+        margin-bottom: 20px;
+    }
 
 
+    .teacher__link {
+        font-size: 18px;
+        line-height: 1.555;
+       
+    }
 }
