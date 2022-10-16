@@ -37,48 +37,153 @@ body {
   }
 }
 /***************** MOBILE *****************/
-@media screen and (min-width: 320px) {
-  .header {
-    max-width: 480px;
-    font-size: 20px;
-    font-weight: 800;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 30px;
-    margin: 0 auto;
-    padding: 30px 20px 50px;
-  }
-  .header__menu {
-    display: none;
-  }
-  .header--mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+.header {
+  font-size: 20px;
+  font-weight: 800;
+  max-width: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 20px 50px;
 }
+.header__menu {
+  display: none;
+}
+.header--mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.header__btn {
+  display: none;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3.5px;
+  font-weight: 900;
+  font-size: 15px;
+  max-width: 80px;
+}
+.logo__white {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3.5px;
+  font-weight: 900;
+  font-size: 15px;
+  max-width: 80px;
+  color: #ffffff;
+}
+.logo__svg {
+  fill: #ff6b09;
+  width: 13.93px;
+  height: 19.38px;
+}
+.logo__text {
+  font-weight: 700;
+  font-size: 5px;
+  line-height: 6px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ff6b09;
+}
+.logo__text--black {
+  color: #000000;
+}
+.logo__text--white {
+  color: #ffffff;
+}
+
 /***************** TABLET *****************/
 @media screen and (min-width: 768px) {
   .header {
     font-size: 26px;
     font-weight: 800;
+    max-width: 768px;
+    padding: 41px 40px 70px;
+  }
+  .header__btn {
+    display: block;
+    width: 260px;
+    height: 48px;
+    margin-left: 150px;
+    border: solid 2px #ff6b09;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ff6b09;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .logo {
+    gap: 3.5px;
+    max-width: 128px;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .logo__white {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 3.5px;
+    max-width: 128px;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 32px;
+    color: #ffffff;
+  }
+  .logo__text {
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #ff6b09;
+  }
+  .logo__svg {
+    fill: #ff6b09;
+    width: 21.56px;
+    height: 29.99px;
   }
 }
 /***************** DESKTOP *****************/
@@ -102,7 +207,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 20px;
+  margin: 0 auto;
+  padding-left: 20px;
 }
 .hero__box {
   display: -webkit-box;
@@ -115,7 +221,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("C:UsersKubaÞsktopGoITHTMLProjektgroup-6-projectsrcimages஬kground-mobile.png");
+  background-image: url("https://github.com/BieganskiP/group-6-project/blob/main/src/images/background-mobile.png");
 }
 .hero__title {
   font-weight: 900;
@@ -146,7 +252,7 @@ body {
   color: #ff6b09;
 }
 .hero__btn {
-  margin: 30px 0;
+  margin: 30px 40px 30px 0;
   width: 260px;
   height: 48px;
   background-color: #ff6b09;
@@ -167,6 +273,7 @@ body {
   position: relative;
   width: 177.75px;
   height: 177.5px;
+  margin: 0 auto;
 }
 .hero__img--transparent {
   position: absolute;
@@ -177,10 +284,60 @@ body {
 }
 
 /***************** TABLET *****************/
+@media screen and (min-width: 768px) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 auto;
+    padding-left: 42px;
+    background-image: url("https://github.com/BieganskiP/group-6-project/blob/main/src/images/background.png");
+  }
+  .hero__title {
+    width: 332px;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    color: #111518;
+  }
+  .hero__text {
+    padding-top: 40px;
+  }
+  .hero__text--gray {
+    color: #b9b9b9;
+    font-weight: 500;
+  }
+  .hero__img {
+    position: relative;
+    width: 321.11px;
+    height: 320.64px;
+    top: -286px;
+    left: 189px;
+  }
+  .hero__img--transparent {
+    position: absolute;
+    top: 17.15px;
+    left: -36.26px;
+    width: 375.75px;
+    height: 268.9px;
+  }
+}
 /***************** DESKTOP *****************/
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: url("C:UsersKubaÞsktopGoITHTMLProjektgroup-6-projectsrcimages஬kground.png");
+    background-image: url("https://github.com/BieganskiP/group-6-project/blob/main/src/images/background.png");
+  }
+  .hero__title {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    color: #111518;
   }
   .hero__img {
     position: relative;
@@ -195,11 +352,16 @@ body {
     height: 602.24px;
   }
 }
+/***************** MOBILE *****************/
 .menu-open {
-  margin-left: 179px;
-  padding: 0 auto;
-  width: 20.5px;
-  height: 12px;
+  background-color: #ffffff;
+  border: none;
+}
+.menu-open:hover,
+.menu-open :focus {
+  color: #ff6b09;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu {
@@ -218,29 +380,50 @@ body {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 .menu__header {
+  font-size: 20px;
+  font-weight: 800;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 30.5px;
+  max-width: 480px;
+  height: 30px;
   margin: 0 auto;
-  padding: 30px 20px 50px;
-}
-.menu__logo {
-  margin: 30px 20px 0;
+  padding: 30px 20px 30px;
 }
 .menu__close {
   width: 14.5px;
   height: 14.5px;
+  margin-top: 5px;
+  margin-right: 3px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.menu__close:hover,
+.menu__close :focus {
+  fill: #ff6b09;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .menu__mobile {
   padding: 0;
-  margin: 108.53px 40px 50px 20px;
+  margin: 50px 40px 50px 20px;
+  width: 260px;
+  height: 139px;
 }
 .menu__link {
   font-family: "Montserrat";
@@ -258,7 +441,6 @@ body {
 .menu__btn {
   width: 260px;
   height: 48px;
-  margin-left: 30px;
   border: solid 2px #ff6b09;
   background-color: rgba(255, 255, 255, 0);
   text-align: center;
@@ -283,6 +465,37 @@ body {
   color: getColor("black");
 }
 
+/***************** TABLET *****************/
+@media screen and (min-width: 768px) {
+  .menu__header {
+    font-size: 20px;
+    font-weight: 800;
+    max-width: 768px;
+    padding: 42px 40px 45px;
+  }
+  .menu__mobile {
+    margin: 72px 0;
+  }
+  .menu__link {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 47px;
+    color: #ffffff;
+  }
+  .menu__btn {
+    display: none;
+  }
+  .menu__close {
+    margin-top: 14px;
+  }
+}
+/***************** DESKTOP *****************/
+@media screen and (min-width: 1200px) {
+  .menu {
+    display: none;
+  }
+}
 /*
  * Główny plik dla stylów.
  * Wszystkie components oraz utils podłączamy tutaj.
