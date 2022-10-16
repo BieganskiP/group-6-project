@@ -3,28 +3,110 @@
 //Edytować poniżej
 /***************** MOBILE *****************/
 
-@media screen and (min-width: 320px) {
-  .header {
-    max-width: 480px;
-    @include sectionHeader(20px);
+.header {
+  @include sectionHeader(20px);
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 20px 50px;
+  &__menu {
+    display: none;
+  }
+  &--mobile {
+    @include flexCenter(row);
+  }
+  &__btn {
+    display: none;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.5px;
+  font-weight: 900;
+  font-size: 15px;
+  max-width: 80px;
+  &__white {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 30px;
-    margin: 0 auto;
-    padding: 30px 20px 50px;
-    &__menu {
-      display: none;
+    flex-wrap: wrap;
+    gap: 3.5px;
+    font-weight: 900;
+    font-size: 15px;
+    max-width: 80px;
+    color: #ffffff;
+  }
+  &__svg {
+    fill: $theme;
+    width: 13.93px;
+    height: 19.38px;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 5px;
+    line-height: 6px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $theme;
+    &--black {
+      color: #000000;
     }
-    &--mobile {
-      @include flexCenter(row);
+    &--white {
+      color: #ffffff;
     }
   }
 }
+
 /***************** TABLET *****************/
+
 @media screen and (min-width: 768px) {
   .header {
     @include sectionHeader(26px);
+    max-width: 768px;
+    padding: 41px 40px 70px;
+    &__btn {
+      display: block;
+      width: 260px;
+      height: 48px;
+      margin-left: 150px;
+      border: solid 2px $theme;
+      background-color: rgba(255, 255, 255, 0);
+      text-align: center;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $theme;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+  }
+  .logo {
+    max-width: 128px;
+    font-weight: 800;
+    font-size: 26px;
+    &__white {
+      max-width: 128px;
+      font-weight: 800;
+      font-size: 26px;
+    }
+    &__text {
+      font-weight: 700;
+      font-size: 8px;
+      line-height: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: $theme;
+    }
+    &__svg {
+      width: 21.56px;
+      height: 29.99px;
+    }
   }
 }
 /***************** DESKTOP *****************/
