@@ -489,7 +489,7 @@ body {
   color: #b9b9b9;
   font-size: 12px;
   line-height: 1.666;
-  letter-spacing: 0.08 em;
+  letter-spacing: 0.08em;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -527,9 +527,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .howWeDo {
-    margin: 0 auto;
-  }
   .howWeDo__heading {
     font-size: 26px;
     font-weight: 800;
@@ -540,6 +537,8 @@ body {
     row-gap: 27px;
   }
   .grid__item {
+    height: 334px;
+    padding: 40px 25px 25px;
     flex-basis: calc((100% - 20px) / 2);
   }
   .grid__title {
@@ -547,6 +546,9 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
+  .howWeDo {
+    margin: 0 auto;
+  }
   .howWeDo__heading {
     font-size: 46px;
     font-weight: 800;
@@ -557,7 +559,17 @@ body {
     row-gap: 20px;
   }
   .grid__item {
+    height: 396px;
+    padding: 40px 30px 30px;
     flex-basis: calc((100% - 40px) / 3);
+  }
+  .grid__title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .grid__text {
+    font-size: 18px;
+    line-height: 1.555;
   }
 }
 .program {
