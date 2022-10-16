@@ -459,41 +459,41 @@ body {
   flex-direction: column;
   gap: 15px;
 }
-.grid__item, .grid__item--highlighted {
+.grid__item {
   text-align: center;
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 280px;
   padding: 30px 10px 10px;
 }
-.grid__item--highlighted {
+.grid__item__item:hover, .grid__item__item:focus {
   background-color: #ff6b09;
 }
-.grid__icon, .grid__icon--highlighted {
+.grid__icon {
   fill: #ff6b09;
   margin-bottom: 20px;
 }
-.grid__icon--highlighted {
+.grid__icon__icon:hover, .grid__icon__icon:focus {
   fill: #fff;
 }
-.grid__title, .grid__title--highlighted {
+.grid__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.428;
   letter-spacing: 0.08 em;
   margin-bottom: 32px;
 }
-.grid__title--highlighted {
+.grid__title__title:hover, .grid__title__title:focus {
   color: #fff;
 }
-.grid__text, .grid__text--highlighted {
+.grid__text {
   color: #b9b9b9;
   font-size: 12px;
   line-height: 1.666;
   letter-spacing: 0.08 em;
   position: relative;
 }
-.grid__text::before, .grid__text--highlighted::before {
+.grid__text::before {
   content: "";
   display: inline-block;
   width: 16.52px;
@@ -507,24 +507,24 @@ body {
   top: -16px;
   transform: translateX(-50%);
 }
-.grid__text--highlighted {
+.grid__text:hover, .grid__text:focus {
   color: #fff;
 }
-.grid__text--highlighted::before {
-  content: "";
-  display: inline-block;
-  width: 16.52px;
-  height: 13.54px;
-  background-size: contain;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23fff'/%3E%3C/svg%3E");
-  position: absolute;
-  left: 50%;
-  top: -16px;
-  transform: translateX(-50%);
-}
 
+@media screen and (min-width: 768px) {
+  .howWeDo__heading {
+    font-size: 26px;
+    font-weight: 800;
+  }
+  .grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 27px;
+  }
+  .grid__item {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
 .program {
   margin: 0 auto;
   max-width: 480px;
