@@ -1,3 +1,87 @@
 @use '../utils' as *;
 
 //Edytować poniżej
+
+.program {
+  margin: 0 auto;
+  max-width: 480px;
+  background-color: #111518;
+  color: #ffffff;
+  overflow: hidden;
+
+  &__header {
+    max-width: 280px;
+    padding-top: 50px;
+    margin: 0 auto 43px;
+    text-align: center;
+  }
+
+  &__semestr-list {
+    margin-left: 94px;
+    list-style-position: inside;
+    position: relative;
+  }
+
+  &__semestr-list-item {
+    position: relative;
+    font-weight: 700;
+    font-size: 14px;
+    // line-height: 2em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0 0 40px 26px;
+    border-left: 1px solid #ffffff;
+
+    &:last-child {
+      border-left: 0px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: #ff6b09;
+      border-radius: 50%;
+      height: 12px;
+      width: 12px;
+      top: 0;
+      left: -6px;
+    }
+  }
+
+  &__topic-list {
+    margin-top: 13px;
+  }
+
+  &__topic-list-item {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.66em;
+    letter-spacing: 0.08em;
+    text-transform: none;
+
+    color: #ff6b09;
+
+    &::before {
+      content: '—';
+    }
+  }
+
+  &__detail-list-item {
+    // margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.66em;
+    letter-spacing: 0.08em;
+    color: #b9b9b9;
+    opacity: 0.5;
+  }
+
+  &__picture {
+    max-width: 59%;
+    position: relative;
+    bottom: 90px;
+    left: 200px;
+    z-index: 2;
+  }
+}

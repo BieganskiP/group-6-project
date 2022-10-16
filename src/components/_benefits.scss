@@ -1,3 +1,54 @@
-@use "../utils" as *;
+@use '../utils' as *;
 
 //Edytować poniżej
+
+.benefits {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #111518;
+  background: linear-gradient(180deg, #111518 0%, #111518 70%, #ffffff 70%, #ffffff 100%);
+  position: relative;
+  top: -150px;
+
+  &__header {
+    width: 180px;
+    font-size: 20px;
+    line-height: 1.36em;
+    letter-spacing: 0.03em;
+    margin: 0 20px 30px;
+    color: #ffffff;
+  }
+
+  &__ordered-list {
+    margin: 0 20px;
+    padding: 20px 14px 0 30px;
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside;
+    padding-left: 30px;
+    background-color: #ffffff;
+  }
+
+  &__ordered-list-item {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.65em;
+    letter-spacing: 0.08em;
+    color: #ff6b09;
+
+    &::before {
+      content: '—';
+      left: -50px;
+      position: relative;
+    }
+  }
+
+  &__nested-list {
+    margin: 18px 0 28px -20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.71em;
+    letter-spacing: 0.08em;
+
+    color: #111518;
+  }
+}

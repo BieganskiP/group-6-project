@@ -283,6 +283,122 @@ body {
   color: getColor("black");
 }
 
+.program {
+  margin: 0 auto;
+  max-width: 480px;
+  background-color: #111518;
+  color: #ffffff;
+  overflow: hidden;
+}
+.program__header {
+  max-width: 280px;
+  padding-top: 50px;
+  margin: 0 auto 43px;
+  text-align: center;
+}
+.program__semestr-list {
+  margin-left: 94px;
+  list-style-position: inside;
+  position: relative;
+}
+.program__semestr-list-item {
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 0 40px 26px;
+  border-left: 1px solid #ffffff;
+}
+.program__semestr-list-item:last-child {
+  border-left: 0px;
+}
+.program__semestr-list-item::before {
+  content: "";
+  position: absolute;
+  background-color: #ff6b09;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  top: 0;
+  left: -6px;
+}
+.program__topic-list {
+  margin-top: 13px;
+}
+.program__topic-list-item {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.66em;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: #ff6b09;
+}
+.program__topic-list-item::before {
+  content: "—";
+}
+.program__detail-list-item {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.66em;
+  letter-spacing: 0.08em;
+  color: #b9b9b9;
+  opacity: 0.5;
+}
+.program__picture {
+  max-width: 59%;
+  position: relative;
+  bottom: 90px;
+  left: 200px;
+  z-index: 2;
+}
+
+.benefits {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #111518;
+  background: linear-gradient(180deg, #111518 0%, #111518 70%, #ffffff 70%, #ffffff 100%);
+  position: relative;
+  top: -150px;
+}
+.benefits__header {
+  width: 180px;
+  font-size: 20px;
+  line-height: 1.36em;
+  letter-spacing: 0.03em;
+  margin: 0 20px 30px;
+  color: #ffffff;
+}
+.benefits__ordered-list {
+  margin: 0 20px;
+  padding: 20px 14px 0 30px;
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  padding-left: 30px;
+  background-color: #ffffff;
+}
+.benefits__ordered-list-item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.65em;
+  letter-spacing: 0.08em;
+  color: #ff6b09;
+}
+.benefits__ordered-list-item::before {
+  content: "—";
+  left: -50px;
+  position: relative;
+}
+.benefits__nested-list {
+  margin: 18px 0 28px -20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71em;
+  letter-spacing: 0.08em;
+  color: #111518;
+}
+
 /*
  * Główny plik dla stylów.
  * Wszystkie components oraz utils podłączamy tutaj.
