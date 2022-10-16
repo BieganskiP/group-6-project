@@ -21,6 +21,7 @@
     }
 
     &__title {
+      width: 280px;
       font-weight: 800;
       font-size: 14px;
       line-height: 130%;
@@ -62,6 +63,11 @@
       line-height: 16px;
       padding-left: 28px;
 
+      &::placeholder {
+        color: #ffffff;
+        opacity: 1;
+      }
+
       &:first-of-type {
         margin-bottom: 20px;
       }
@@ -98,6 +104,7 @@
     padding: 0px 100px 0px 100px;
 
     &__title {
+      width: 569px;
       height: 100px;
       font-size: 26px;
     }
