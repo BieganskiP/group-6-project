@@ -14,6 +14,41 @@
       padding-bottom: 50px;
     }
 
+    &__logo {
+      width: 90px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0.04em;
+      color: #111518;
+      fill: $theme;
+      &--icon {
+        width: 16px;
+        height: 21px;
+      }
+      &--desc {
+        margin-top: 4px;
+        font-weight: 700;
+        font-size: 5px;
+        line-height: 6px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      &--orange {
+        color: $theme;
+      }
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 31px;
+    }
+
     &__bottom {
       display: flex;
       align-items: center;
@@ -43,6 +78,69 @@
         color: $theme;
         outline: none;
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 0;
+    &__top {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 40px;
+    }
+
+    &__block {
+      flex-direction: row;
+    }
+
+    &__logo {
+      width: 128px;
+      font-size: 26px;
+      line-height: 32px;
+      letter-spacing: 0.04em;
+      &--icon {
+        width: 22px;
+        height: 30px;
+      }
+      &--desc {
+        font-size: 8px;
+        line-height: 10px;
+        letter-spacing: 0.18em;
+      }
+    }
+
+    &__tel {
+      height: 40px;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.08em;
+      border-right: 1px solid #b9b9b9;
+      padding-right: 24px;
+    }
+    &__bottom {
+      padding-left: 40px;
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .footer {
+    &__top {
+      justify-content: flex-start;
+      padding: 56px;
+      padding-left: 183px;
+    }
+    &__tel {
+      font-size: 30px;
+      line-height: 37px;
+      text-align: center;
+      letter-spacing: 0.08em;
+      margin-left: 290px;
+    }
+    &__bottom {
+      padding-left: 183px;
     }
   }
 }
