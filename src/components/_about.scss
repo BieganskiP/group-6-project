@@ -179,55 +179,55 @@
         padding: 130px 0;
         max-width: 1200px;
         margin: 0 auto;
+
+        &__heading {
+            @include sectionHeader(46px);
+            margin-bottom: 50px;
+        }
+
+        &__title {
+            @include sectionHeader(30px);
+            padding-bottom: 15px;
+            margin-bottom: 45px;
+        }
+
+        &__photo {
+            margin-right: 30px;
+            min-width: 530px;
+            height: 667px;
+        }
+
+        &__competences {
+            font-weight: 500;
+            font-size: 16px;
+            margin-left: 8.92px;
+            margin-bottom: 60px;
+
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            font-weight: 400px;
+            font-size: 18px;
+            line-height: 1.555;
+
+            &::before {
+                top: -30px;
+            }
+
+        }
+
+        &__paragraph {
+            margin-bottom: 20px;
+        }
+
+        &__link {
+            font-size: 18px;
+            line-height: 1.555;
+
+        }
     }
 
-    .teacher__heading {
-        @include sectionHeader(46px);
-        margin-bottom: 50px;
-    }
 
-
-    .teacher__title {
-        @include sectionHeader(30px);
-        padding-bottom: 15px;
-        margin-bottom: 45px;
-    }
-
-    .teacher__photo {
-        margin-right: 30px;
-        min-width: 530px;
-        height: 667px;
-    }
-
-    .teacher__competences {
-        font-weight: 500;
-        font-size: 16px;
-        margin-left: 8.92px;
-        margin-bottom: 60px;
-
-    }
-
-    .teacher__description {
-        display: flex;
-        flex-direction: column;
-        font-weight: 400px;
-        font-size: 18px;
-        line-height: 1.555;
-
-    }
-
-    .teacher__description::before {
-        top: -30px;
-    }
-
-    .teacher__paragraph {
-        margin-bottom: 20px;
-    }
-
-
-    .teacher__link {
-        font-size: 18px;
-        line-height: 1.555;
-
-    }
 }
