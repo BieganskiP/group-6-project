@@ -1,3 +1,44 @@
 @use "../utils" as *;
 
 //Edytować poniżej
+.howWeDo {
+    @include container;
+    @include flexCenter(column);
+
+
+    &__heading {
+        @include sectionHeader(20px);
+        line-height: 1.3px;
+        letter-spacing: .03em;
+        color: $primary-text;
+        margin-bottom: 30px;
+    }
+
+}
+
+.grid {
+    @include flexCenter(column);
+    gap: 15px;
+
+    &__item {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.428;
+        letter-spacing: .08 em;
+        margin-bottom: 32px;
+    
+    }
+
+    &__text {
+        color: $secondary-text;
+        font-size: 12px;
+        line-height: 1.666;
+        letter-spacing: .08 em;
+    }
+
+}
