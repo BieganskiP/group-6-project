@@ -48,13 +48,10 @@
         border-bottom: .97px solid $secondary-text;
     }
 
-
     &__box {
         display: flex;
-    
 
     }
-
 
     &__icons {
         display: flex;
@@ -66,7 +63,6 @@
         width: 16.52px;
         height: 100%;
     }
-
 
     &__competences {
         display: block;
@@ -86,7 +82,7 @@
     }
 
     &__item::before {
-        @include pseudoelement(16.52px,13.54px);
+        @include pseudoelement(16.52px, 13.54px);
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='18' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.546.796c-.628.281-1.23.624-1.805 1.007-1.155.76-2.211 1.665-3.202 2.63a35.71 35.71 0 0 0-2.785 3.08c-.218.27-1.194 1.47-1.194 1.47L2.5 2.897.967 7.147l5.49 6.548c.534-1.08 1.047-2.145 1.55-3.071.125-.236.256-.457.382-.682 0 0 .644-1.133.813-1.418a34.248 34.248 0 0 1 2.217-3.309c.807-1.054 1.685-2.06 2.68-2.945a11.976 11.976 0 0 1 1.587-1.215 8.849 8.849 0 0 1 1.803-.9 8.999 8.999 0 0 0-1.943.641Z' fill='%23FF6B09'/%3E%3C/svg%3E");
         position: absolute;
         left: -24px;
@@ -102,13 +98,12 @@
     }
 
     &__description::before {
-        @include pseudoelement(16.52px,13.54px);
+        @include pseudoelement(16.52px, 13.54px);
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23FF6B09'/%3E%3C/svg%3E");
         position: absolute;
         top: -20px;
     }
 
- 
     &__link {
         font-weight: 500px;
         font-size: 12px;
@@ -116,128 +111,123 @@
         color: $theme;
         text-decoration: underline;
     }
-
 }
 
 // TABLET
 
 @media screen and (min-width: 768px) {
-  .teacher{
-    padding: 50px 40px;
-  }
+    .teacher {
+        padding: 50px 40px;
 
-  .teacher__heading {
-    @include sectionHeader(26px);
-    margin-bottom: 30px;
+        &__heading {
+            @include sectionHeader(26px);
+            margin-bottom: 30px;
+        }
+
+        &__container {
+            display: flex;
+
+        }
+
+        &__photo {
+            margin-right: 40px;
+            min-width: 243px;
+            height: 305.58px;
+        }
+
+        &__title {
+            @include sectionHeader(20px);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid $secondary-text;
+        }
+
+        &__competences {
+            font-size: 12px;
+            margin-left: 8.92px;
+            margin-bottom: 50px;
+
+        }
+
+        &__item {
+            margin-bottom: 30px;
+        }
+
+        &__description {
+            font-weight: 400px;
+            font-size: 10px;
+            line-height: 2.8;
+
+            &::before {
+                top: -25px;
+            }
+        }
+
+        &__link {
+            font-weight: 500px;
+            font-size: 12px;
+            line-height: 1.666;
+
+        }
+    }
 }
 
-.teacher__container{
-    display: flex;
-    
-}
-
-.teacher__photo{
-    margin-right: 40px;
-    min-width: 243px;
-    height: 305.58px;
-}
-
-.teacher__title {
-    @include sectionHeader(20px);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid $secondary-text;
-}
-
-.teacher__competences{
-    font-size: 12px;
-    margin-left: 8.92px;
-    margin-bottom: 50px;
-
-}
-
-.teacher__item {
-    margin-bottom: 30px;
-}
-
-
-.teacher__description {
-    font-weight: 400px;
-    font-size: 10px;
-    line-height: 2.8;
-}
-
-
-.teacher__description::before{
-    top:-25px;
-}
-
-
-.teacher__link {
-    font-weight: 500px;
-    font-size: 12px;
-    line-height: 1.666;
-   
-}
-
-  }
-
-  // DESKTOP
+// DESKTOP
 
 @media screen and (min-width: 1200px) {
     .teacher {
         padding: 130px 0;
         max-width: 1200px;
-     margin: 0 auto;
+        margin: 0 auto;
+
+        &__heading {
+            @include sectionHeader(46px);
+            margin-bottom: 50px;
+        }
+
+        &__title {
+            @include sectionHeader(30px);
+            padding-bottom: 15px;
+            margin-bottom: 45px;
+        }
+
+        &__photo {
+            margin-right: 30px;
+            min-width: 530px;
+            height: 667px;
+        }
+
+        &__competences {
+            font-weight: 500;
+            font-size: 16px;
+            margin-left: 8.92px;
+            margin-bottom: 60px;
+
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            font-weight: 400px;
+            font-size: 18px;
+            line-height: 1.555;
+
+            &::before {
+                top: -30px;
+            }
+
+        }
+
+        &__paragraph {
+            margin-bottom: 20px;
+        }
+
+        &__link {
+            font-size: 18px;
+            line-height: 1.555;
+
+        }
     }
 
-    .teacher__heading {
-        @include sectionHeader(46px);
-        margin-bottom: 50px;
-    }
 
-    
-    .teacher__title {
-        @include sectionHeader(30px);
-        padding-bottom: 15px;
-        margin-bottom: 45px;
-    }
-
-    .teacher__photo{
-        margin-right: 30px;
-        min-width: 530px;
-        height: 667px;
-    }
-
-    .teacher__competences{
-        font-weight: 500;
-        font-size: 16px;
-        margin-left: 8.92px;
-        margin-bottom: 60px;
-    
-    }
-
-    .teacher__description {
-        display: flex;
-        flex-direction: column;
-        font-weight: 400px;
-        font-size: 18px;
-        line-height: 1.555;
-
-    }
-
-    .teacher__description::before{
-        top:-30px;
-    }
-
-    .teacher__paragraph{
-        margin-bottom: 20px;
-    }
-
-
-    .teacher__link {
-        font-size: 18px;
-        line-height: 1.555;
-       
-    }
 }
