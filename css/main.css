@@ -617,6 +617,7 @@ body {
   max-width: 400px;
 }
 .program__header {
+  line-height: 28px;
   max-width: 280px;
   padding-top: 50px;
   margin: 0 auto 43px;
@@ -634,6 +635,7 @@ body {
   position: relative;
   font-weight: 700;
   font-size: 14px;
+  line-height: 1.65em;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0 0 40px 26px;
@@ -668,6 +670,7 @@ body {
   content: "—";
 }
 .program__detail-list-item {
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 12px;
   line-height: 1.66em;
@@ -733,6 +736,7 @@ body {
     font-size: 46px;
     line-height: 1.3em;
     letter-spacing: 0.03em;
+    padding-top: 120px;
     margin: 0 0 100px 184px;
   }
   .program__semestr-list-container {
@@ -862,6 +866,11 @@ body {
     width: 356px;
     padding-right: 20px;
     flex-basis: calc((100% - 40px) / 3);
+    font-size: 20px;
+  }
+  .benefits__nested-list-item {
+    font-size: 20px;
+    line-height: 1.2em;
   }
 }
 .teacher {

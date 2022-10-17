@@ -100,6 +100,12 @@
       width: 356px;
       padding-right: 20px;
       flex-basis: calc((100% - 2 * 20px) / 3);
+      font-size: 20px;
+    }
+
+    &__nested-list-item {
+      font-size: 20px;
+      line-height: 1.2em;
     }
   }
 }
