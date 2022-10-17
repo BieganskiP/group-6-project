@@ -1,14 +1,14 @@
 @use '../utils' as *;
+/* ======= Mobile ========*/
 
 .problems {
   display: flex;
   flex-direction: column;
   padding: 50px 20px 0 20px;
+  height: 545px;
   font-size: 20px;
   font-weight: 800;
   gap: 30px;
-  height: 545px;
-  width: 1200px;
   background-color: $primary-text;
   color: $contrast-text;
   margin: 0 auto;
@@ -16,6 +16,7 @@
   &__header {
     @include sectionHeader(24px);
     letter-spacing: 0.03em;
+    margin: 0 auto;
 
     &--orange {
       color: $theme;
@@ -25,14 +26,14 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 465px;
     margin: auto;
+    padding: 20px 30px;
     font-size: 14px;
     font-weight: 700;
     gap: 10px;
     background-color: $contrast-text;
     color: $primary-text;
-    height: 465px;
-    padding: 20px 30px;
     overflow: visible;
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.1);
     &__text {
@@ -40,6 +41,9 @@
       font-weight: 700;
       margin-bottom: 5px;
     }
+  }
+  &__icon {
+    display: none;
   }
 }
 
@@ -50,14 +54,17 @@
     width: 100%;
     &__list {
       display: grid;
-      grid-template-columns: 236px 236px;
       justify-content: center;
       align-items: center;
+      grid-template-columns: 236px 236px;
       gap: 22px;
+    }
+    &__icon {
+      display: none;
     }
   }
 }
-/*======== Deskopt =======*/
+/*======== Desktop =======*/
 
 @media (min-width: 1280px) {
   .problems {
@@ -65,18 +72,20 @@
     width: 100%;
     max-width: 1680px;
     &__header {
+      position: relative;
+      margin-left: 125px;
       @include sectionHeader(46px);
       letter-spacing: 0.03em;
-      margin-left: 110px;
     }
     &__list {
-      height: 465px;
-      width: 85%;
-      display: grid;
-      padding: 80px 82px 52px 114px;
-      grid-template-columns: 236px 236px 250px;
       justify-content: center;
       align-items: center;
+      display: grid;
+      height: 465px;
+      width: 85%;
+      padding: 80px 82px 52px 114px;
+      z-index: 2;
+      grid-template-columns: 236px 236px 250px;
       gap: 32px 110px;
       &__text {
         &--active {
@@ -84,11 +93,31 @@
           &:hover,
           &:focus {
             cursor: pointer;
-            scale: 1.2;
+            transform: scale(1.2);
             transition: 0.3s;
           }
         }
       }
+    }
+    &__icon {
+      display: block;
+      height: 620px;
+      width: 445px;
+      position: relative;
+      left: 77%;
+      top: -88%;
+      z-index: 1;
+      fill: #ffffff33;
+    }
+    &__icon {
+      display: block;
+      height: 620px;
+      width: 445px;
+      position: relative;
+      left: 77%;
+      top: -88%;
+      z-index: 1;
+      fill: #ffffff33;
     }
   }
 }
