@@ -23,20 +23,20 @@
       </li>
     </ul>
   </nav>
-  <button class="header__btn" type="button">Consultation by phone</button>
+  <button class="header__btn" type="button" data-modal-tablet-open>Consultation by phone</button>
   <button
     class="js-open-menu menu-open"
     aria-expanded="false"
     aria-controls="mobile-menu"
     type="button"
   >
-    <svg width="20.5" height="12">
+    <svg class="menu-open__btn" width="20.5" height="12">
       <use xlink:href="./images/icons.svg#icon-burger"></use>
     </svg>
   </button>
 </header>
 
-<section class="container">
+<section class="container background">
   <div class="hero">
     <div class="hero__box">
       <h1 class="hero__title">Complex preparation for English UPE</h1>
@@ -44,30 +44,22 @@
         <span class="hero__text--gray">It won’t be easy.</span>But you are guaranteed to get
         <span class="hero__text--orange">+25 points</span>
       </p>
+
+      <button class="hero__btn" type="button">i want a free lesson</button>
     </div>
-    <button class="hero__btn" type="button">i want a free lesson</button>
-  </div>
-  <div class="hero__img">
-    <picture>
-      <source
-        srcset="
-          ./images/header-img@1.png 1x width:177px,
-          ./images/header-img@2.png 2x,
-          ./images/header-img@3.png 3x
-        "
-      />
-      <img src="./images/header-img@1.png" alt="class meeting" />
-    </picture>
-    <picture class="hero__img--transparent">
-      <source
-        srcset="
-          ./images/header-transparent@1.png 1x,
-          ./images/header-transparent@2.png 2x,
-          ./images/header-transparent@3.png 3x
-        "
-      />
-      <img src="./images/header-transparent@1.png" alt="class meeting" />
-    </picture>
+    <div class="hero__img">
+      <picture>
+        <source
+          srcset="
+            ./images/header-img@1.png 1x 208w,
+            ./images/header-img@2.png 2x,
+            ./images/header-img@3.png 3x
+          "
+          sizes="(min-width: 320px) 208px"
+        />
+        <img src="./images/header-img@1.png" alt="class meeting" />
+      </picture>
+    </div>
   </div>
 </section>
 
@@ -84,7 +76,7 @@
       <p class="logo__text">Hellish <span class="logo__text--white">english</span></p>
     </div>
     <button class="menu__close js-close-menu" type="button">
-      <svg width="14.5" height="14.5">
+      <svg class="menu__close-btn" width="14.5" height="14.5">
         <use xlink:href="./images/icons.svg#icon-x"></use>
       </svg>
     </button>
@@ -96,7 +88,7 @@
       <li><a class="menu__link" href="/partials/howWeDo.html">Training options</a></li>
       <li><a class="menu__link" href="./partials/contacts_footer.html">Contacts</a></li>
     </ul>
-    <button class="menu__btn" type="button">Consultation by phone</button>
+    <button class="menu__btn" type="button" data-modal-mobile-open>Consultation by phone</button>
   </div>
 </div>
 

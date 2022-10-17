@@ -25,3 +25,33 @@ import './sass/main.scss';
     bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
+
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('[data-modal-mobile-open]'),
+    closeModalBtn: document.querySelector('[data-modal-mobile-close]'),
+    modal: document.querySelector('[data-modal-mobile]'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden-mobile');
+  }
+})();
+
+(() => {
+  const refs = {
+    openModalBtn2: document.querySelector('[data-modal-tablet-open]'),
+    closeModalBtn2: document.querySelector('[data-modal-tablet-close]'),
+    modal2: document.querySelector('[data-modal-tablet]'),
+  };
+
+  refs.openModalBtn2.addEventListener('click', toggleModal2);
+  refs.closeModalBtn2.addEventListener('click', toggleModal2);
+
+  function toggleModal2() {
+    refs.modal2.classList.toggle('is-hidden-tablet');
+  }
+})();
