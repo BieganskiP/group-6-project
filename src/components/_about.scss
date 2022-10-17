@@ -84,7 +84,7 @@
   }
 
   &__description {
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 12px;
     line-height: 1.666;
     color: $secondary-text;
@@ -100,7 +100,7 @@
   }
 
   &__link {
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 12px;
     line-height: 1.666;
     color: $theme;
@@ -147,7 +147,7 @@
     }
 
     &__description {
-      font-weight: 400px;
+      font-weight: 400;
       font-size: 10px;
       line-height: 2.8;
 
@@ -157,7 +157,7 @@
     }
 
     &__link {
-      font-weight: 500px;
+      font-weight: 500;
       font-size: 12px;
       line-height: 1.666;
     }
@@ -199,7 +199,7 @@
     &__description {
       display: flex;
       flex-direction: column;
-      font-weight: 400px;
+      font-weight: 400;
       font-size: 18px;
       line-height: 1.555;
 
