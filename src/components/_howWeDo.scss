@@ -1,7 +1,7 @@
 @use "../utils" as *;
 
 //Edytować poniżej
-@mixin pseudoelement ($width, $height) {
+@mixin pseudoElement ($width, $height) {
     content: "";
     display: inline-block;
     width: $width;
@@ -15,14 +15,14 @@
     @include container;
     @include flexCenter(column);
     padding: 205px 20px 50px 20px;
+    max-width: 1314px;
 
 
-    &__heading {
+    &.howWeDo__heading {
         @include sectionHeader(20px);
         line-height: 1.3px;
         letter-spacing: .03em;
         color: $primary-text;
-        margin-bottom: 30px;
     }
 
 }
@@ -30,6 +30,7 @@
 .grid {
     @include flexCenter(column);
     gap: 15px;
+    margin-top: 30px;
 
     &__item {
         text-align: center;
@@ -37,22 +38,20 @@
         width: 100%;
         height: 280px;
         padding: 30px 10px 10px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            background-color: $theme;
+        }
     }
 
-    &__item--highlighted{
-        @extend .grid__item;
-       background-color: $theme;
-    }
-
-    &__icon{
+    &__icon {
         fill: $theme;
         margin-bottom: 20px;
-    }
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &__icon--highlighted{
-        @extend .grid__icon;
-        fill: $contrast-text;
-       
     }
 
     &__title {
@@ -61,51 +60,110 @@
         line-height: 1.428;
         letter-spacing: .08 em;
         margin-bottom: 32px;
-        
-    
-    }
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  
-
-
-    &__title--highlighted{
-        @extend .grid__title;
-       color: $contrast-text;
-       
     }
 
     &__text {
         color: $secondary-text;
         font-size: 12px;
         line-height: 1.666;
-        letter-spacing: .08 em;
+        letter-spacing: .08em;
         position: relative;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &::before {
+            @include pseudoElement(16.52px, 13.54px);
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23FF6B09'/%3E%3C/svg%3E");
+            position: absolute;
+            left: 50%;
+            top: -16px;
+            transform: translateX(-50%);
+            transition: backround-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
     }
 
-&__text::before{
-        @include pseudoelement(16.52px,13.54px);
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23FF6B09'/%3E%3C/svg%3E");
-        position: absolute;
-        left: 50%;
-        top: -16px;
-        transform: translateX(-50%);
-      }
+}
 
-    &__text--highlighted{
-        @extend .grid__text;
-       color: $contrast-text;
-       
-    }
+.grid__item:hover .grid__icon,
+.grid__item:focus .grid__icon {
+    fill: $contrast-text;
+}
 
-    &__text--highlighted::before{
-        @include pseudoelement(16.52px,13.54px);
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23fff'/%3E%3C/svg%3E");
-        position: absolute;
-        left: 50%;
-        top: -16px;
-        transform: translateX(-50%);
-    }
+.grid__item:hover .grid__title,
+.grid__item:focus .grid__title,
+.grid__item:focus .grid__text,
+.grid__item:hover .grid__text {
+    color: $contrast-text;
+
+}
+
+.grid__item:focus .grid__text::before,
+.grid__item:hover .grid__text::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .4h20v1.94H0V.4Z' fill='%23fff'/%3E%3C/svg%3E");
+
+}
+
+
+// TABLET
+
+@media screen and (min-width: 768px) {
+
+        .howWeDo.howWeDo__heading {
+            @include sectionHeader(26px);
+        }
     
 
+    .grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 27px;
+
+        &__item {
+            height: 334px;
+            padding: 40px 25px 25px;
+            flex-basis: calc((100% - 20px)/2);
+        }
+
+        &__title {
+            height: 53px;
+        }
+    }
+
+}
+
+// DESKTOP
+
+@media screen and (min-width: 1200px) {
+
+    .howWeDo{
+margin: 0 auto;
+
+    &.howWeDo__heading {
+        @include sectionHeader(46px);
+    
+    }
+}
+    .grid {
+        margin-top: 50px;
+        row-gap: 20px;
+
+        &__item {
+            height: 396px;
+            padding: 40px 30px 30px;
+            flex-basis: calc((100% - 40px)/3);
+        }
+
+        &__title{
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        &__text{
+            font-size: 18px;
+        line-height: 1.555;
+        }
+    }
 
 }
