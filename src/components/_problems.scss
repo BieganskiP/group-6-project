@@ -8,12 +8,14 @@
   font-weight: 800;
   gap: 30px;
   height: 545px;
+  width: 1200px;
   background-color: $primary-text;
   color: $contrast-text;
+  margin: 0 auto;
+
   &__header {
     @include sectionHeader(24px);
     letter-spacing: 0.03em;
-    margin: left;
 
     &--orange {
       color: $theme;
@@ -61,6 +63,7 @@
   .problems {
     height: 440px;
     width: 100%;
+    max-width: 1680px;
     &__header {
       @include sectionHeader(46px);
       letter-spacing: 0.03em;
@@ -77,12 +80,12 @@
       gap: 32px 110px;
       &__text {
         &--active {
-          transition: .5s;
+          transition: 0.5s;
           &:hover,
           &:focus {
             cursor: pointer;
             transform: scale(1.2);
-            transition: .3s;
+            transition: 0.3s;
           }
         }
       }
