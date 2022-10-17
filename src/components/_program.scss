@@ -5,9 +5,11 @@
 .program {
   margin: 0 auto;
   max-width: 480px;
+  // height: auto;
   background-color: #111518;
   color: #ffffff;
   overflow: hidden;
+  position: relative;
 
   &__header {
     max-width: 280px;
@@ -19,7 +21,7 @@
   &__semestr-list {
     margin-left: 94px;
     list-style-position: inside;
-    position: relative;
+    // position: relative;
   }
 
   &__semestr-list-item {
@@ -78,10 +80,118 @@
   }
 
   &__picture {
-    max-width: 59%;
+    // max-width: 59%;
+    width: 176px;
+    height: auto;
     position: relative;
-    bottom: 90px;
-    left: 200px;
+    top: -80px;
+    left: 220px;
     z-index: 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .program {
+    max-width: 768px;
+
+    &__header {
+      padding-top: 51px;
+      margin: 0 0 52px 40px;
+      text-align: left;
+    }
+
+    &__semestr-list-item {
+      padding: 0 0 30px 50px;
+    }
+
+    &__detail-list {
+      margin-top: 5px;
+    }
+
+    &__topic-list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__topic-list-item {
+      width: 176px;
+
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+
+    &__picture {
+      width: 384px;
+      height: auto;
+      // position: relative;
+      top: -150px;
+      left: 360px;
+      z-index: 2;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .program {
+    max-width: 1680px;
+    height: 1237px;
+
+    &__header {
+      max-width: 688px;
+      font-weight: 800;
+      font-size: 46px;
+      line-height: 1.3em;
+      letter-spacing: 0.03em;
+
+      margin: 0 0 100px 184px;
+    }
+
+    &__semestr-list-container {
+      border-top: 1px solid #ffffff;
+    }
+
+    &__semestr-list {
+      display: flex;
+      // flex-direction: column;
+      // border-top: 1px solid #ffffff;
+      // margin: 0 auto;
+      justify-content: center;
+    }
+
+    &__semestr-list-item {
+      border-left: 0px;
+      padding-top: 60px;
+      padding-left: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: #ff6b09;
+        border-radius: 50%;
+        height: 12px;
+        width: 12px;
+        top: -6px;
+        left: 0;
+      }
+    }
+
+    &__topic-list {
+      flex-direction: column;
+    }
+
+    &__topic-list-item:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    &__picture {
+      width: 759px;
+      height: 502px;
+      bottom: 0;
+      left: -76px;
+      z-index: 0;
+      // position: absolute;
+      // margin-right: auto;
+    }
   }
 }
