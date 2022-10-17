@@ -431,7 +431,7 @@ body {
   }
   .problems__list__text--active:hover, .problems__list__text--active:focus {
     cursor: pointer;
-    transform: scale(1.2);
+    scale: 1.2;
     transition: 0.3s;
   }
 }
