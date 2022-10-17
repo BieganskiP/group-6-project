@@ -51,7 +51,7 @@
   flex-direction: column;
   align-items: center;
   background: $contrast-text;
-  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.1);
   &__avatar {
     display: flex;
     flex-direction: column;
@@ -115,7 +115,6 @@
     padding-top: 40px;
     padding-bottom: 40px;
     flex-direction: row;
-    // align-items: flex-start;
     align-items: center;
     &__avatar {
       display: flex;
@@ -157,6 +156,12 @@
       border: none;
       background-color: transparent;
       position: relative;
+      cursor: pointer;
+      transition: 250ms;
+      &:hover,
+      :focus {
+        transform: scale(1.4);
+      }
       &--left {
         right: 12.5px;
       }
@@ -250,6 +255,12 @@
     fill: $theme;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    transition: 250ms;
+    &:hover,
+    :focus {
+      transform: scale(1.4);
+    }
     &--img {
       border: none;
       background-color: transparent;
