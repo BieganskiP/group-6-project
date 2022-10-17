@@ -3,32 +3,34 @@
 //Edytować poniżej
 
 .benefits {
-  max-width: 480px;
   margin: 0 auto;
   background: #111518;
   background: linear-gradient(180deg, #111518 0%, #111518 70%, #ffffff 70%, #ffffff 100%);
   position: relative;
-  top: -150px;
+  top: -30px;
 
   &__header {
-    width: 180px;
+    min-width: 190px;
     font-size: 20px;
     line-height: 1.36em;
     letter-spacing: 0.03em;
-    margin: 0 20px 30px;
+    margin: 0 260px 30px 20px;
     color: #ffffff;
   }
 
-  &__ordered-list {
+  &__list-container {
     margin: 0 20px;
-    padding: 20px 14px 0 30px;
-    list-style-type: decimal-leading-zero;
-    list-style-position: inside;
-    padding-left: 30px;
-    background-color: #ffffff;
   }
 
-  &__ordered-list-item {
+  &__list {
+    margin: 0 auto;
+    padding: 20px 14px 0 50px;
+    list-style-position: inside;
+    background-color: #ffffff;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.1);
+  }
+
+  &__list-item {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.65em;
@@ -37,13 +39,12 @@
 
     &::before {
       content: '—';
-      left: -50px;
       position: relative;
     }
   }
 
   &__nested-list {
-    margin: 18px 0 28px -20px;
+    margin: 18px 0 28px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.71em;
@@ -55,12 +56,7 @@
 
 @media screen and (min-width: 768px) {
   .benefits {
-    max-width: 768px;
     margin: 0 auto;
-    // background: #111518;
-    // background: linear-gradient(180deg, #111518 0%, #111518 70%, #ffffff 70%, #ffffff 100%);
-    // position: relative;
-    // top: -150px;
 
     &__header {
       width: auto;
@@ -71,16 +67,16 @@
       margin: 0 20px 30px;
     }
 
-    &__ordered-list {
+    &__list {
       display: flex;
       flex-wrap: wrap;
-      flex-basis: calc((100% - 20px) / 2);
-      gap: 40px;
+      gap: 20px;
       justify-content: center;
     }
 
-    &__ordered-list-item {
+    &__list-item {
       width: 236px;
+      flex-basis: calc((100% - 20px) / 2);
     }
   }
 }
@@ -89,20 +85,21 @@
   .benefits {
     max-width: 1314px;
     background: transparent;
-    top: -400px;
+    top: -130px;
+    z-index: 2;
 
     &__header {
       display: none;
     }
 
-    &__ordered-list {
-      flex-basis: calc((100% - 2 * 20px) / 3);
+    &__list {
       gap: 20px;
     }
 
-    &__ordered-list-item {
+    &__list-item {
       width: 356px;
       padding-right: 20px;
+      flex-basis: calc((100% - 2 * 20px) / 3);
     }
   }
 }
