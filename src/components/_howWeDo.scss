@@ -127,6 +127,7 @@
 @media screen and (min-width: 1200px) {
   .howWeDo {
     margin: 0 auto;
+    display: block;
 
     &__heading {
       @include sectionHeader(46px);

@@ -582,6 +582,7 @@ body {
 @media screen and (min-width: 1200px) {
   .howWeDo {
     margin: 0 auto;
+    display: block;
   }
   .howWeDo__heading {
     font-size: 46px;
