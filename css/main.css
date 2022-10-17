@@ -1467,7 +1467,7 @@ body {
   .contacts__input:first-of-type {
     margin-bottom: 20px;
   }
-  .contacts__input:focus {
+  .contacts__input:invalid {
     border-color: #ff6b09;
     outline: none;
   }
