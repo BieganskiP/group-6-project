@@ -362,7 +362,7 @@ body {
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 0.03em;
-  margin: left;
+  margin: 0 auto;
 }
 .problems__header--orange {
   color: #ff6b09;
@@ -409,15 +409,17 @@ body {
     width: 100%;
   }
   .problems__header {
+    position: relative;
     font-size: 46px;
     font-weight: 800;
     letter-spacing: 0.03em;
-    margin-left: 110px;
+    margin-left: 125px;
   }
   .problems__list {
     height: 465px;
     width: 85%;
     display: grid;
+    z-index: 2;
     padding: 80px 82px 52px 114px;
     grid-template-columns: 236px 236px 250px;
     justify-content: center;
@@ -431,6 +433,15 @@ body {
     cursor: pointer;
     transform: scale(1.2);
     transition: 0.3s;
+  }
+  .problems__icon {
+    height: 620px;
+    width: 445px;
+    position: relative;
+    left: 77%;
+    top: -88%;
+    z-index: 1;
+    fill: rgba(255, 255, 255, 0.2);
   }
 }
 .howWeDo {
