@@ -1,6 +1,6 @@
 @mixin container {
   min-width: 320px;
-  max-width: 100%;
+  max-width: 1314px;
 }
 // Ogólnie używany flexbox, w $direction wpisujemy row lub column.
 @mixin flexCenter($direction) {

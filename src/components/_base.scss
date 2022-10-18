@@ -1,10 +1,15 @@
-@use "../utils" as *;
+@use '../utils' as *;
 
 //Edytować poniżej
 
 body {
   min-width: 320px;
   font-family: 'Montserrat', sans-serif;
+}
+.over {
+  width: 100%;
+  background-color: $primary-text;
+  height: fit-content;
 }
 @media (min-width: 768px) {
   body {

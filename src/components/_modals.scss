@@ -2,7 +2,7 @@
 
 /**************** MODAL MOBILE******************/
 .backdrop-mobile {
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   background: rgba(17, 21, 24, 0.9);
@@ -214,6 +214,7 @@
   transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
   opacity: 1;
   visibility: visible;
+  z-index: 999;
 }
 
 .is-hidden-tablet {
