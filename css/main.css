@@ -71,6 +71,8 @@ body {
 .header__btn :focus {
   cursor: pointer;
   scale: 1.1;
+  background-color: #ff6b09;
+  color: #fff;
 }
 
 .logo {
