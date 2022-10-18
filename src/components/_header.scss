@@ -3,18 +3,16 @@
 //Edytować poniżej
 /***************** MOBILE *****************/
 .wrapper {
-  margin: 0 auto 100px auto;
+  margin: 0 auto;
   max-width: 1680px;
   height: fit-content;
 }
 .header {
-  margin: 0 auto;
   @include sectionHeader(20px);
   max-width: 480px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 30px 20px;
   &__menu {
     display: none;
@@ -75,11 +73,9 @@
 }
 
 /***************** TABLET *****************/
-
 @media (min-width: 768px) {
   .wrapper {
     height: 556.5px;
-    margin: 0 auto;
   }
   .header {
     @include sectionHeader(26px);
@@ -129,41 +125,40 @@
 @media screen and (min-width: 1280px) {
   .wrapper {
     height: 878px;
-    margin: 0 auto;
   }
   .header {
     @include sectionHeader(46px);
-    min-width: 1000px;
-    max-width: 1280px;
+    margin: 0 auto;
+    min-width: none;
+    width: 1480px;
+    max-width: 1680px;
     padding: 30px 0 45px;
-    margin: 0 183px;
-    gap: 60px;
+    gap: 142px;
+    justify-content: flex-start;
+
     &__menu {
       display: flex;
       align-items: center;
       text-align: center;
-      gap: 40px;
       font-weight: 700;
       font-size: 14px;
       line-height: 1.214;
       color: $secondary-text;
       text-transform: uppercase;
-      margin-left: 60px;
     }
     &__link:hover,
     :focus {
       color: $theme;
-      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &__btn {
       display: block;
       width: 336px;
       height: 70px;
-      margin-left: 0;
+      margin-left: auto;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
-
   .logo {
     font-weight: 800;
     font-size: 26px;

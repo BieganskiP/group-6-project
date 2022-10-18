@@ -113,12 +113,10 @@
   .hero {
     max-width: 1680px;
     gap: 100px;
-    margin: 50px auto 0;
-    justify-content: center;
+    margin: 0 auto;
     padding: 0;
-    &__box {
-      justify-items: start;
-    }
+    justify-content: center;
+
     &__title {
       font-size: 58px;
       line-height: 1.293;
