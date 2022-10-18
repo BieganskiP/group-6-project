@@ -52,6 +52,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $contrast-text;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover,
     :focus {

@@ -293,6 +293,7 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .hero__btn:hover,
 .hero__btn :focus {
