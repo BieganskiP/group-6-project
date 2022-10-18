@@ -83,6 +83,10 @@
     opacity: 0.5;
     position: relative;
     z-index: 2;
+
+    &:first-child {
+      margin-top: 5px;
+    }
   }
 
   &__picture {

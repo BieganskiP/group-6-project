@@ -192,6 +192,7 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+    gap: 40px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.214;
@@ -824,6 +825,9 @@ body {
   position: relative;
   z-index: 2;
 }
+.program__detail-list-item:first-child {
+  margin-top: 5px;
+}
 .program__picture {
   width: 176px;
   height: auto;
@@ -1180,7 +1184,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: #111518;
+  stroke: #111518;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-button:hover .close-button__icon, .close-button:focus .close-button__icon {
@@ -1248,6 +1252,9 @@ body {
     font-size: 46px;
     font-weight: 800;
     margin-bottom: 50px;
+  }
+  .teacher__item {
+    font-weight: 600;
   }
   .teacher__title {
     font-size: 30px;
