@@ -80,13 +80,13 @@
   .problems {
     height: 440px;
     width: 100%;
-    max-width: 1680px;
+    max-width: 1314px;
     margin: 0 auto 300px auto;
     &__header {
       position: relative;
-      margin-left: 125px;
       @include sectionHeader(46px);
       letter-spacing: 0.03em;
+      padding: 0;
     }
     &__list {
       justify-content: center;

@@ -537,15 +537,15 @@ body {
   .problems {
     height: 440px;
     width: 100%;
-    max-width: 1680px;
+    max-width: 1314px;
     margin: 0 auto 300px auto;
   }
   .problems__header {
     position: relative;
-    margin-left: 125px;
     font-size: 46px;
     font-weight: 800;
     letter-spacing: 0.03em;
+    padding: 0;
   }
   .problems__list {
     justify-content: center;
@@ -714,8 +714,8 @@ body {
   .howWeDo {
     margin: 0 auto;
     display: block;
-    max-width: 1680px;
-    padding-inline: 40px;
+    max-width: 1314px;
+    padding-inline: 0;
   }
   .howWeDo__heading {
     font-size: 46px;
@@ -724,7 +724,7 @@ body {
   .grid {
     margin: 0 auto;
     row-gap: 20px;
-    max-width: 1680px;
+    max-width: 1314px;
     padding: 0;
   }
   .grid__item {
@@ -868,12 +868,13 @@ body {
     margin: 100px auto 0 auto;
   }
   .program__header {
-    max-width: 688px;
+    max-width: 1314px;
     font-weight: 800;
     font-size: 46px;
     line-height: 1.3em;
     letter-spacing: 0.03em;
-    margin: 0 0 100px 184px;
+    margin: 51px auto 100px;
+    padding: 0;
   }
   .program__semestr-list-container {
     border-top: 1px solid #ffffff;
@@ -1233,8 +1234,9 @@ body {
 @media (min-width: 1280px) {
   .teacher {
     padding-block: 0;
-    max-width: 1280px;
+    max-width: 1314px;
     margin: 0 auto;
+    padding: 0;
   }
   .teacher__heading {
     font-size: 46px;

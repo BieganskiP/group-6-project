@@ -146,13 +146,14 @@
     margin: 100px auto 0 auto;
 
     &__header {
-      max-width: 688px;
+      max-width: 1314px;
       font-weight: 800;
       font-size: 46px;
       line-height: 1.3em;
       letter-spacing: 0.03em;
 
-      margin: 0 0 100px 184px;
+      margin: 51px auto 100px;
+      padding: 0;
     }
 
     &__semestr-list-container {
