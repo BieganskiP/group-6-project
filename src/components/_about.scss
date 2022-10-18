@@ -161,22 +161,16 @@
 }
 
 .close-button {
-  width: 18px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   position: absolute;
   top: 8px;
   right: 8px;
   border: none;
-  background-color: $contrast-text;
- 
+  background-color: transparent;
 
-  &:hover,
-  &:focus {
-    border-color:$theme;
-  }
-
-}
+ }
 
 .close-button__icon {
   position: absolute;
