@@ -6,7 +6,6 @@
   background-image: url('https://raw.githubusercontent.com/BieganskiP/group-6-project/main/src/images/background-mobile.png');
   background-size: contain;
 }
-
 .hero {
   @include flexCenter(column);
   padding: 0 30px;
@@ -81,7 +80,6 @@
     align-items: flex-start;
 
     margin: 40px auto 0 auto;
-    height: 660px;
     max-width: 768px;
     &__title {
       width: 332px;
@@ -111,7 +109,7 @@
     // box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
   }
   .hero {
-    max-width: 1680px;
+    max-width: 1314px;
     gap: 100px;
     margin: 0 auto;
     padding: 0;

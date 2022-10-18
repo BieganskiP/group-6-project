@@ -2,11 +2,7 @@
 
 //Edytować poniżej
 /***************** MOBILE *****************/
-.wrapper {
-  margin: 0 auto;
-  max-width: 1680px;
-  height: fit-content;
-}
+
 .header {
   @include sectionHeader(20px);
   max-width: 480px;
@@ -14,6 +10,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 30px 20px;
+  margin: 0 auto;
   &__menu {
     display: none;
   }
@@ -74,9 +71,6 @@
 
 /***************** TABLET *****************/
 @media (min-width: 768px) {
-  .wrapper {
-    height: 556.5px;
-  }
   .header {
     @include sectionHeader(26px);
     max-width: 768px;
@@ -122,15 +116,12 @@
   }
 }
 /***************** DESKTOP *****************/
-@media screen and (min-width: 1280px) {
-  .wrapper {
-    height: 878px;
-  }
+@media (min-width: 1280px) {
   .header {
     @include sectionHeader(46px);
     margin: 0 auto;
     min-width: none;
-    width: 1480px;
+    width: 1314px;
     max-width: 1680px;
     padding: 30px 0 45px;
     gap: 142px;

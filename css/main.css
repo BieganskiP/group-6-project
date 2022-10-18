@@ -44,14 +44,6 @@ body {
   }
 }
 /***************** MOBILE *****************/
-.wrapper {
-  margin: 0 auto;
-  max-width: 1680px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .header {
   font-size: 20px;
   font-weight: 800;
@@ -60,6 +52,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 30px 20px;
+  margin: 0 auto;
 }
 .header__menu {
   display: none;
@@ -124,9 +117,6 @@ body {
 
 /***************** TABLET *****************/
 @media (min-width: 768px) {
-  .wrapper {
-    height: 556.5px;
-  }
   .header {
     font-size: 26px;
     font-weight: 800;
@@ -173,16 +163,13 @@ body {
   }
 }
 /***************** DESKTOP *****************/
-@media screen and (min-width: 1280px) {
-  .wrapper {
-    height: 878px;
-  }
+@media (min-width: 1280px) {
   .header {
     font-size: 46px;
     font-weight: 800;
     margin: 0 auto;
     min-width: none;
-    width: 1480px;
+    width: 1314px;
     max-width: 1680px;
     padding: 30px 0 45px;
     gap: 142px;
@@ -329,7 +316,6 @@ body {
     justify-content: start;
     align-items: flex-start;
     margin: 40px auto 0 auto;
-    height: 660px;
     max-width: 768px;
   }
   .hero__title {
@@ -358,7 +344,7 @@ body {
     background-image: url("https://raw.githubusercontent.com/BieganskiP/group-6-project/main/src/images/background.png");
   }
   .hero {
-    max-width: 1680px;
+    max-width: 1314px;
     gap: 100px;
     margin: 0 auto;
     padding: 0;
@@ -2057,7 +2043,7 @@ body {
 }
 
 /***************** TABLET *****************/
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu__header {
     max-width: 768px;
     padding: 42px 40px 45px;
@@ -2080,7 +2066,7 @@ body {
   }
 }
 /***************** DESKTOP *****************/
-@media screen and (min-width: 1200px) {
+@media (min-width: 1280px) {
   .menu-open {
     display: none;
   }
