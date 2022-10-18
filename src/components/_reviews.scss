@@ -83,6 +83,59 @@
     display: none;
   }
 }
+.graduates {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    &--arrow-left {
+      padding-right: 14px;
+    }
+    &--arrow-right {
+      padding-left: 14px;
+    }
+    &--not-mobile {
+      display: none;
+    }
+  }
+  &__img {
+    width: 54px;
+    height: 54px;
+    transition: 250ms;
+    cursor: pointer;
+    border-radius: 50%;
+    background: $theme;
+  }
+  &__btn {
+    width: 25px;
+    height: 54px;
+    fill: $theme;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 250ms;
+    &:hover,
+    :focus {
+      transform: scale(1.4);
+    }
+    &--img {
+      border: none;
+      background-color: transparent;
+      &:focus,
+      :hover {
+        transform: scale(1.1);
+        border: solid 1px $theme;
+        border-radius: 50%;
+      }
+    }
+  }
+}
 //tablet
 @media screen and (min-width: 768px) {
   .container-rev {
@@ -155,10 +208,25 @@
       }
     }
   }
+  .graduates {
+    padding-top: 30px;
+    &__list {
+      gap: 30px;
+      &--arrow-left {
+        display: none;
+      }
+      &--arrow-right {
+        display: none;
+      }
+      &--not-mobile {
+        display: flex;
+      }
+    }
+  }
 }
 
 //desktop
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .container-rev {
     width: 1200px;
     &__heading {
@@ -210,83 +278,6 @@
       }
     }
   }
-}
-
-.graduates {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    &--arrow-left {
-      padding-right: 14px;
-    }
-    &--arrow-right {
-      padding-left: 14px;
-    }
-    &--not-mobile {
-      display: none;
-    }
-  }
-  &__img {
-    width: 54px;
-    height: 54px;
-    transition: 250ms;
-    cursor: pointer;
-    border-radius: 50%;
-    background: $theme;
-  }
-  &__btn {
-    width: 25px;
-    height: 54px;
-    fill: $theme;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: 250ms;
-    &:hover,
-    :focus {
-      transform: scale(1.4);
-    }
-    &--img {
-      border: none;
-      background-color: transparent;
-      &:focus,
-      :hover {
-        transform: scale(1.1);
-        border: solid 1px $theme;
-        border-radius: 50%;
-      }
-    }
-  }
-}
-
-//tablet
-@media screen and (min-width: 768px) {
-  .graduates {
-    padding-top: 30px;
-    &__list {
-      gap: 30px;
-      &--arrow-left {
-        display: none;
-      }
-      &--arrow-right {
-        display: none;
-      }
-      &--not-mobile {
-        display: flex;
-      }
-    }
-  }
-}
-
-//destop
-@media screen and (min-width: 1200px) {
   .graduates {
     padding-top: 40px;
   }

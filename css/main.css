@@ -1370,6 +1370,60 @@ body {
   display: none;
 }
 
+.graduates {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.graduates__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.graduates__list--arrow-left {
+  padding-right: 14px;
+}
+.graduates__list--arrow-right {
+  padding-left: 14px;
+}
+.graduates__list--not-mobile {
+  display: none;
+}
+.graduates__img {
+  width: 54px;
+  height: 54px;
+  transition: 250ms;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #ff6b09;
+}
+.graduates__btn {
+  width: 25px;
+  height: 54px;
+  fill: #ff6b09;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 250ms;
+}
+.graduates__btn:hover,
+.graduates__btn :focus {
+  transform: scale(1.4);
+}
+.graduates__btn--img {
+  border: none;
+  background-color: transparent;
+}
+.graduates__btn--img:focus,
+.graduates__btn--img :hover {
+  transform: scale(1.1);
+  border: solid 1px #ff6b09;
+  border-radius: 50%;
+}
+
 @media screen and (min-width: 768px) {
   .container-rev {
     width: 768px;
@@ -1441,8 +1495,23 @@ body {
   .slide-rev__btn--right {
     left: 12.5px;
   }
+  .graduates {
+    padding-top: 30px;
+  }
+  .graduates__list {
+    gap: 30px;
+  }
+  .graduates__list--arrow-left {
+    display: none;
+  }
+  .graduates__list--arrow-right {
+    display: none;
+  }
+  .graduates__list--not-mobile {
+    display: flex;
+  }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .container-rev {
     width: 1200px;
   }
@@ -1492,79 +1561,6 @@ body {
   .slide-rev__btn--right {
     left: 85px;
   }
-}
-.graduates {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-.graduates__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.graduates__list--arrow-left {
-  padding-right: 14px;
-}
-.graduates__list--arrow-right {
-  padding-left: 14px;
-}
-.graduates__list--not-mobile {
-  display: none;
-}
-.graduates__img {
-  width: 54px;
-  height: 54px;
-  transition: 250ms;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #ff6b09;
-}
-.graduates__btn {
-  width: 25px;
-  height: 54px;
-  fill: #ff6b09;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: 250ms;
-}
-.graduates__btn:hover,
-.graduates__btn :focus {
-  transform: scale(1.4);
-}
-.graduates__btn--img {
-  border: none;
-  background-color: transparent;
-}
-.graduates__btn--img:focus,
-.graduates__btn--img :hover {
-  transform: scale(1.1);
-  border: solid 1px #ff6b09;
-  border-radius: 50%;
-}
-
-@media screen and (min-width: 768px) {
-  .graduates {
-    padding-top: 30px;
-  }
-  .graduates__list {
-    gap: 30px;
-  }
-  .graduates__list--arrow-left {
-    display: none;
-  }
-  .graduates__list--arrow-right {
-    display: none;
-  }
-  .graduates__list--not-mobile {
-    display: flex;
-  }
-}
-@media screen and (min-width: 1200px) {
   .graduates {
     padding-top: 40px;
   }
@@ -1682,7 +1678,7 @@ body {
     width: 390px;
   }
 }
-@media (min-width: 1680px) {
+@media (min-width: 1280px) {
   .contacts {
     height: 840px;
     padding: 0px 100px 0px 100px;
