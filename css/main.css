@@ -41,6 +41,7 @@ body {
 @media (min-width: 1200px) {
   body {
     min-width: 1200px;
+    overflow-x: hidden;
   }
 }
 /***************** MOBILE *****************/
@@ -617,6 +618,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 15px;
+  padding: 20px;
 }
 .grid__item {
   text-align: center;
