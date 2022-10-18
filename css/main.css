@@ -66,6 +66,7 @@ body {
 }
 .header__btn {
   display: none;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .header__btn:hover,
 .header__btn :focus {
