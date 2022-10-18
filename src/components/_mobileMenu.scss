@@ -3,12 +3,16 @@
 //Edytować poniżej
 /***************** MOBILE *****************/
 .menu-open {
-  background-color: #ffffff;
+  background-color: $contrast-text;
   border: none;
-  &:hover,
-  :focus {
-    color: $theme;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &__btn {
+    stroke: #000000;
+    &:hover,
+    :focus {
+      cursor: pointer;
+      stroke: $theme;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }
 .menu {
@@ -37,9 +41,13 @@
     margin-right: 3px;
     border: none;
     background-color: rgba(255, 255, 255, 0);
+  }
+  &__close-btn {
+    stroke: $contrast-text;
     &:hover,
     :focus {
-      fill: $theme;
+      cursor: pointer;
+      stroke: $theme;
       transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
@@ -58,8 +66,9 @@
     font-family: 'Montserrat';
     font-weight: 900;
     font-size: 20px;
-    line-height: 36px;
-    color: #ffffff;
+    line-height: 1.8;
+    color: $contrast-text;
+    cursor: pointer;
     &:hover,
     :focus {
       color: $theme;
@@ -75,7 +84,7 @@
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 1.25;
     color: $theme;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -106,8 +115,8 @@
       font-family: 'Montserrat';
       font-weight: 700;
       font-size: 26px;
-      line-height: 47px;
-      color: #ffffff;
+      line-height: 1.808;
+      color: $contrast-text;
     }
     &__btn {
       display: none;
@@ -119,6 +128,9 @@
 }
 /***************** DESKTOP *****************/
 @media screen and (min-width: 1200px) {
+  .menu-open {
+    display: none;
+  }
   .menu {
     display: none;
   }
