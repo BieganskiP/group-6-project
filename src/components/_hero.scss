@@ -106,14 +106,13 @@
 @media (min-width: 1280px) {
   .background {
     background-image: url('https://raw.githubusercontent.com/BieganskiP/group-6-project/main/src/images/background.png');
-    // box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
   }
   .hero {
     max-width: 1314px;
     gap: 100px;
     margin: 0 auto;
     padding: 0;
-    justify-content: center;
+    justify-content: start;
 
     &__title {
       font-size: 58px;

@@ -348,7 +348,7 @@ body {
     gap: 100px;
     margin: 0 auto;
     padding: 0;
-    justify-content: center;
+    justify-content: start;
   }
   .hero__title {
     font-size: 58px;
