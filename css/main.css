@@ -74,6 +74,7 @@ body {
   scale: 1.1;
   background-color: #ff6b09;
   color: #fff;
+  border-radius: 4px;
 }
 
 .logo {
