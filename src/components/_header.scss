@@ -2,16 +2,20 @@
 
 //Edytować poniżej
 /***************** MOBILE *****************/
-
+.wrapper {
+  margin: 0 auto 100px auto;
+  max-width: 1680px;
+  height: fit-content;
+}
 .header {
+  margin: 0 auto;
   @include sectionHeader(20px);
   max-width: 480px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
   margin: 0 auto;
-  padding: 30px 20px 50px;
+  padding: 30px 20px;
   &__menu {
     display: none;
   }
@@ -27,7 +31,6 @@
     }
   }
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -69,11 +72,15 @@
 
 /***************** TABLET *****************/
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
+  .wrapper {
+    height: 556.5px;
+    margin: 0 auto;
+  }
   .header {
     @include sectionHeader(26px);
     max-width: 768px;
-    padding: 41px 40px 70px;
+    padding-inline: 40px;
     &__btn {
       display: block;
       width: 260px;
@@ -115,10 +122,15 @@
   }
 }
 /***************** DESKTOP *****************/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    height: 878px;
+    margin: 0 auto;
+  }
   .header {
     @include sectionHeader(46px);
-    max-width: 1314px;
+    min-width: 1000px;
+    max-width: 1280px;
     padding: 30px 0 45px;
     margin: 0 183px;
     gap: 60px;

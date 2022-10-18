@@ -1,7 +1,6 @@
 @mixin container {
   min-width: 320px;
   max-width: 100%;
-  margin-block: auto;
 }
 // Ogólnie używany flexbox, w $direction wpisujemy row lub column.
 @mixin flexCenter($direction) {
@@ -17,4 +16,27 @@
 @mixin sectionHeader($size) {
   font-size: $size;
   font-weight: 800;
+}
+@mixin flexStart($direction) {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+@mixin pseudoElement($width, $height) {
+  content: '';
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+@mixin pseudoElement($width, $height) {
+  content: '';
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
 }

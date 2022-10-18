@@ -15,31 +15,9 @@
     letter-spacing: 0.03em;
     color: $primary-text;
     margin-top: 50px;
+    padding-inline: 20px;
   }
 }
-//tablet
-@media screen and (min-width: 768px) {
-  .container-rev {
-    width: 768px;
-    &__heading {
-      font-size: 26px;
-      margin-top: 50px;
-    }
-  }
-}
-
-//desktop
-@media screen and (min-width: 1200px) {
-  .container-rev {
-    width: 1200px;
-    &__heading {
-      font-size: 46px;
-      margin-top: 130px;
-    }
-  }
-}
-
-//mobile
 .slide-rev {
   max-width: 480px;
   margin-left: 20px;
@@ -107,6 +85,13 @@
 }
 //tablet
 @media screen and (min-width: 768px) {
+  .container-rev {
+    width: 768px;
+    &__heading {
+      font-size: 26px;
+      margin-block: 50px 30px;
+    }
+  }
   .slide-rev {
     max-width: 688px;
     margin-left: 40px;
@@ -174,6 +159,13 @@
 
 //desktop
 @media screen and (min-width: 1200px) {
+  .container-rev {
+    width: 1200px;
+    &__heading {
+      font-size: 46px;
+      margin-top: 130px;
+    }
+  }
   .slide-rev {
     max-width: 1090px;
     margin-left: 40px;

@@ -3,7 +3,7 @@
 //Edytować poniżej
 
 .program {
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   background-color: #111518;
   color: #ffffff;
   overflow: hidden;
@@ -94,38 +94,32 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .program {
     &__header {
       padding-top: 51px;
       margin: 0 0 52px 40px;
       text-align: left;
     }
-
     &__semestr-list-container {
       max-width: 1240px;
       padding-bottom: 170px;
     }
-
     &__semestr-list {
       margin-left: 103px;
     }
-
     &__semestr-list-item {
       padding: 0 0 30px 50px;
       font-size: 12px;
       line-height: 1.65em;
     }
-
     &__detail-list {
       margin-top: 5px;
     }
-
     &__topic-list {
       display: flex;
       flex-direction: row;
     }
-
     &__topic-list-item {
       width: 176px;
 
@@ -133,7 +127,6 @@
         margin-right: 50px;
       }
     }
-
     &__picture {
       width: 384px;
       height: auto;
@@ -143,9 +136,10 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .program {
     max-width: 1680px;
+    margin: 100px auto 0 auto;
 
     &__header {
       max-width: 688px;

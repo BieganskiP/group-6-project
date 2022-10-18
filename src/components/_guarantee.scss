@@ -16,7 +16,8 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $primary-text;
-    padding: 30px;
+    padding: 0 30px;
+    margin-block: 50px 30px;
   }
 
   &__list {
@@ -70,16 +71,17 @@
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1280px) {
   .guarantee {
     &__header {
       font-size: 46px;
-      padding: 50px;
+      padding-block: 80px 20px;
     }
     &__list {
+      width: 1314px;
       background-color: #f1f1f1;
-      margin: 0 183px;
-      padding: 40px 123px;
+      margin: 0 auto;
+      padding-block: 50px 20px;
     }
     &__icon {
       width: 22px;

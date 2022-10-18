@@ -1,33 +1,22 @@
 @use '../utils' as *;
 
 //Edytować poniżej
-@mixin pseudoElement($width, $height) {
-  content: '';
-  display: inline-block;
-  width: $width;
-  height: $height;
-  background-size: contain;
-  background-color: transparent;
-  background-repeat: no-repeat;
-}
-
 .howWeDo {
+  margin: 205px auto 0 auto;
   @include container;
   @include flexCenter(column);
 
   &__heading {
     @include sectionHeader(20px);
-    line-height: 1.3px;
+    line-height: 1.3em;
     letter-spacing: 0.03em;
     color: $primary-text;
     margin-bottom: 30px;
   }
 }
-
 .grid {
   @include flexCenter(column);
   gap: 15px;
-  margin-top: 30px;
 
   &__item {
     text-align: center;
@@ -100,11 +89,14 @@
 // TABLET
 
 @media screen and (min-width: 768px) {
-  .howWeDo.howWeDo__heading {
-    @include sectionHeader(26px);
+  .howWeDo {
+    margin-top: 201px;
+    &__heading {
+      @include sectionHeader(26px);
+    }
   }
-
   .grid {
+    padding: 0 40px;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 27px;
@@ -123,18 +115,22 @@
 
 // DESKTOP
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1280px) {
   .howWeDo {
     margin: 0 auto;
     display: block;
+    max-width: 1680px;
+    padding-inline: 40px;
 
     &__heading {
       @include sectionHeader(46px);
     }
   }
   .grid {
-    margin-top: 50px;
+    margin: 0 auto;
     row-gap: 20px;
+    max-width: 1680px;
+    padding: 0;
 
     &__item {
       height: 396px;

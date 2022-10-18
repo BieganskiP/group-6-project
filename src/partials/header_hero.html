@@ -1,43 +1,42 @@
-<header class="header container">
-  <div class="logo">
-    <p>Hell</p>
-    <svg class="logo__svg">
-      <use xlink:href="./images/icons.svg#icon-flame"></use>
-    </svg>
-    <p>EN</p>
-    <p class="logo__text">Hellish <span class="logo__text--black">english</span></p>
-  </div>
-  <nav>
-    <ul class="header__menu">
-      <li>
-        <a class="header__link" href="#program_benefits.html">Studying program</a>
-      </li>
-      <li>
-        <a class="header__link" href="#about.html">About</a>
-      </li>
-      <li>
-        <a class="header__link" href="#howWeDo.html">Training options</a>
-      </li>
-      <li>
-        <a class="header__link" href="#contacts_footer.html">Contacts</a>
-      </li>
-    </ul>
-  </nav>
-  <button class="header__btn" type="button" data-modal-tablet-open>Consultation by phone</button>
-  <button
-    class="js-open-menu menu-open"
-    aria-expanded="false"
-    aria-controls="mobile-menu"
-    type="button"
-  >
-    <svg class="menu-open__btn" width="20.5" height="12">
-      <use xlink:href="./images/icons.svg#icon-burger"></use>
-    </svg>
-  </button>
-</header>
-
-<section class="container background">
-  <div class="hero">
+<div class="wrapper">
+  <header class="header">
+    <a href="index.html" class="logo">
+      <p>Hell</p>
+      <svg class="logo__svg">
+        <use xlink:href="./images/icons.svg#icon-flame"></use>
+      </svg>
+      <p>EN</p>
+      <p class="logo__text">Hellish <span class="logo__text--black">english</span></p>
+    </a>
+    <nav>
+      <ul class="header__menu">
+        <li>
+          <a class="header__link" href="#program_benefits">Studying program</a>
+        </li>
+        <li>
+          <a class="header__link" href="#about">About</a>
+        </li>
+        <li>
+          <a class="header__link" href="#howWeDo">Training options</a>
+        </li>
+        <li>
+          <a class="header__link" href="#contacts">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="header__btn" type="button" data-modal-tablet-open>Consultation by phone</button>
+    <button
+      class="js-open-menu menu-open"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      type="button"
+    >
+      <svg class="menu-open__btn" width="20.5" height="12">
+        <use xlink:href="./images/icons.svg#icon-burger"></use>
+      </svg>
+    </button>
+  </header>
+  <section class="background hero">
     <div class="hero__box">
       <h1 class="hero__title">Complex preparation for English UPE</h1>
       <p class="hero__text">
@@ -51,7 +50,7 @@
       <picture>
         <source
           srcset="
-            ./images/header-img@1.png 1x 208w,
+            ./images/header-img@1.png 1x,
             ./images/header-img@2.png 2x,
             ./images/header-img@3.png 3x
           "
@@ -60,9 +59,8 @@
         <img src="./images/header-img@1.png" alt="class meeting" />
       </picture>
     </div>
-  </div>
-</section>
-
+  </section>
+</div>
 <!-- MOBILE MENU -->
 
 <div class="menu js-menu-container" id="mobile-menu">

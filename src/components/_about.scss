@@ -1,26 +1,10 @@
 @use '../utils' as *;
 
 //Edytować poniżej
-
-@mixin flexStart($direction) {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: $direction;
-}
-
-@mixin pseudoElement($width, $height) {
-  content: '';
-  display: inline-block;
-  width: $width;
-  height: $height;
-  background-size: contain;
-  background-color: transparent;
-  background-repeat: no-repeat;
-}
-
 .teacher {
+  margin-top: 50px;
   @include container;
-  padding: 50px 20px;
+  padding: 0 20px;
 
   &__heading {
     @include sectionHeader(20px);
@@ -31,8 +15,7 @@
   }
 
   &__photo {
-    margin-bottom: 20px;
-    margin-right: 37px;
+    margin: 0 auto 20px auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
@@ -110,9 +93,9 @@
 
 // TABLET
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .teacher {
-    padding: 50px 40px;
+    padding: 0 40px;
 
     &__heading {
       @include sectionHeader(26px);
@@ -165,11 +148,10 @@
 }
 
 // DESKTOP
-
-@media screen and (min-width: 1200px) {
+@media (min-width: 1280px) {
   .teacher {
-    padding: 130px 0;
-    max-width: 1200px;
+    padding-block: 0;
+    max-width: 1280px;
     margin: 0 auto;
 
     &__heading {
