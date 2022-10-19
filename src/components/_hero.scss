@@ -8,11 +8,14 @@
 }
 .hero {
   @include flexCenter(column);
-  padding: 0 30px;
+  padding: 0 20px;
   &__box {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    flex-grow: 0;
   }
   &__title {
     font-weight: 900;
@@ -38,7 +41,7 @@
     }
   }
   &__btn {
-    margin: 30px 20px 30px 0;
+    margin: 30px auto 30px auto;
     width: 260px;
     height: 48px;
     background-color: $theme;
