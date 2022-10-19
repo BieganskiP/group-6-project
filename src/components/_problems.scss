@@ -4,7 +4,7 @@
 .problems {
   display: flex;
   flex-direction: column;
-  padding: 50px 20px 0 20px;
+  padding: 50px 0 0 0;
   height: 545px;
   font-size: 20px;
   font-weight: 800;
@@ -12,12 +12,13 @@
   background-color: $primary-text;
   color: $contrast-text;
   margin: 25.5px auto 0 auto;
-
+  &__container {
+    padding: 0 20px;
+  }
   &__header {
     @include sectionHeader(24px);
     letter-spacing: 0.03em;
-    margin: 0 auto;
-
+    margin: 0 auto 0 0;
     &--orange {
       color: $theme;
     }
@@ -53,21 +54,22 @@
   .problems {
     margin-top: 0;
     height: 340px;
-    width: 100%;
-    &__header {
-      margin: 0;
-      padding: 0 22px;
+
+    &__container {
+      margin: auto;
+      max-width: 688px;
+      padding: 0px;
     }
     &__list {
-      max-width: 668px;
+      max-width: 688px;
       min-height: 303px;
-      max-height: 303px;
-      padding: 10px 0;
+      padding: 30px 96px;
       display: grid;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       grid-template-columns: 236px 236px;
       grid-template-rows: 88px 88px 88px;
+      gap: 10px 25px;
     }
     &__icon {
       display: none;
@@ -82,6 +84,10 @@
     width: 100%;
     max-width: 1314px;
     margin: 0 auto 300px auto;
+    &__container {
+      margin: auto;
+      max-width: 1314px;
+    }
     &__header {
       position: relative;
       @include sectionHeader(46px);
@@ -89,20 +95,17 @@
       padding: 0;
     }
     &__list {
-      justify-content: center;
-      align-items: center;
+      
       align-self: center;
       display: grid;
-      padding: 0;
+      padding: 80px 0px 52px 0px;
       height: 362px;
       min-height: 362px;
       max-width: 1314px;
       min-width: none;
-      max-width: 1314px;
       z-index: 2;
       font-size: 20px;
       letter-spacing: 0.08em;
-      padding-top: 50px;
       grid-template-columns: 306px 336px 336px;
       grid-template-rows: 115px 115px;
       &__text {
