@@ -112,6 +112,12 @@
     }
     &__nested-list {
       font-size: 20px;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: 0.3s;
+      }
     }
   }
 }
