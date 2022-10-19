@@ -550,8 +550,7 @@ body {
   }
   .problems__list {
     justify-content: center;
-    align-items: center;
-    align-self: center;
+    align-items: start;
     display: grid;
     padding: 0;
     height: 362px;
@@ -563,8 +562,11 @@ body {
     font-size: 20px;
     letter-spacing: 0.08em;
     padding-top: 50px;
-    grid-template-columns: 306px 336px 336px;
+    grid-template-columns: 306px 336px 350px;
     grid-template-rows: 115px 115px;
+  }
+  .problems__list li:nth-child(3n+3) {
+    margin-left: 50px;
   }
   .problems__list__text--active {
     transition: 0.5s;
@@ -581,16 +583,6 @@ body {
     position: relative;
     left: 77%;
     top: -100%;
-    z-index: 1;
-    fill: rgba(255, 255, 255, 0.2);
-  }
-  .problems__icon {
-    display: block;
-    height: 620px;
-    width: 445px;
-    position: relative;
-    left: 77%;
-    top: -88%;
     z-index: 1;
     fill: rgba(255, 255, 255, 0.2);
   }
