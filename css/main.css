@@ -464,7 +464,7 @@ body {
 .problems {
   display: flex;
   flex-direction: column;
-  padding: 50px 20px 0 20px;
+  padding: 50px 0 0 0;
   height: 545px;
   font-size: 20px;
   font-weight: 800;
@@ -473,11 +473,14 @@ body {
   color: #fff;
   margin: 25.5px auto 0 auto;
 }
+.problems__container {
+  padding: 0 20px;
+}
 .problems__header {
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 0.03em;
-  margin: 0 auto;
+  margin: 0 auto 0 0;
 }
 .problems__header--orange {
   color: #ff6b09;
@@ -512,22 +515,22 @@ body {
   .problems {
     margin-top: 0;
     height: 340px;
-    width: 100%;
   }
-  .problems__header {
-    margin: 0;
-    padding: 0 22px;
+  .problems__container {
+    margin: auto;
+    max-width: 688px;
+    padding: 0px;
   }
   .problems__list {
-    max-width: 668px;
+    max-width: 688px;
     min-height: 303px;
-    max-height: 303px;
-    padding: 10px 0;
+    padding: 30px 96px;
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     grid-template-columns: 236px 236px;
     grid-template-rows: 88px 88px 88px;
+    gap: 10px 25px;
   }
   .problems__icon {
     display: none;
@@ -541,6 +544,10 @@ body {
     max-width: 1314px;
     margin: 0 auto 300px auto;
   }
+  .problems__container {
+    margin: auto;
+    max-width: 1314px;
+  }
   .problems__header {
     position: relative;
     font-size: 46px;
@@ -549,20 +556,17 @@ body {
     padding: 0;
   }
   .problems__list {
-    justify-content: center;
-    align-items: start;
+    align-self: center;
     display: grid;
-    padding: 0;
+    padding: 80px 0px 52px 0px;
     height: 362px;
     min-height: 362px;
     max-width: 1314px;
     min-width: none;
-    max-width: 1314px;
     z-index: 2;
     font-size: 20px;
     letter-spacing: 0.08em;
-    padding-top: 50px;
-    grid-template-columns: 306px 336px 350px;
+    grid-template-columns: 306px 336px 336px;
     grid-template-rows: 115px 115px;
   }
   .problems__list li:nth-child(3n+3) {
@@ -969,7 +973,7 @@ body {
     margin: 0 20px 30px;
   }
   .benefits__list {
-    max-width: 668px;
+    max-width: 688px;
     min-height: 394px;
     max-height: 394px;
     padding: 30px 0;
